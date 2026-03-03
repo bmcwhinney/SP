@@ -200,9 +200,6 @@
             .footer-nav { gap: 10px 24px; }
             .accreditation-badges { gap: 28px; }
             .accreditation-badges img { height: 42px; max-width: 170px; }
-        }
-
-        @media (max-width: 768px) {
             .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
             .whatsapp-float svg { width: 24px; height: 24px; }
             .whatsapp-float .tooltip { display: none; }
@@ -392,13 +389,21 @@
                 menuToggle.classList.remove('active');
                 overlay.classList.remove('active');
                 document.body.classList.remove('menu-open');
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    d.classList.remove('active');
+                    d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+                });
             }
 
             menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-                overlay.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
+                if (navLinks.classList.contains('active')) {
+                    closeMenu();
+                } else {
+                    navLinks.classList.add('active');
+                    menuToggle.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.classList.add('menu-open');
+                }
             });
 
             overlay.addEventListener('click', closeMenu);
@@ -427,13 +432,7 @@
             });
 
             window.addEventListener('resize', () => {
-                if (window.innerWidth > 992) {
-                    closeMenu();
-                    document.querySelectorAll('.dropdown').forEach(d => {
-                        d.classList.remove('active');
-                        d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
-                    });
-                }
+                if (window.innerWidth > 992) closeMenu();
             });
         });
     </script>
