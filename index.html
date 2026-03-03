@@ -114,6 +114,10 @@
         .footer-legal { margin-top: 24px; font-size: 0.85rem; color: #888; display: flex; flex-direction: column; align-items: center; gap: 12px; }
         .footer-link { color: var(--text-primary); font-size: 0.9rem; font-weight: 500; }
         .footer-link:hover { color: var(--teal); }
+        .footer-contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px; padding-top: 36px; border-top: 1px solid #EAEAEA; text-align: left; }
+        .footer-contact-block h4 { font-family: var(--font-body); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: #999; margin-bottom: 8px; font-weight: 600; }
+        .footer-contact-block p, .footer-contact-block a { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+        .footer-contact-block a:hover { color: var(--teal); }
         .accreditation-badges { display: flex; justify-content: center; align-items: center; gap: 48px; margin-top: 36px; padding-top: 36px; border-top: 1px solid #EAEAEA; flex-wrap: wrap; }
         .accreditation-badges img { height: 55px; width: auto; max-width: 220px; object-fit: contain; opacity: 0.8; transition: opacity var(--transition-speed); }
         .accreditation-badges img:hover { opacity: 1; }
@@ -356,6 +360,18 @@
                 <img src="DGSF.png" alt="DGSF - Deutsche Gesellschaft für Systemische Therapie, Beratung und Familientherapie" loading="lazy" width="834" height="246">
             </div>
 
+            <div class="footer-contact">
+                <div class="footer-contact-block">
+                    <h4>Address</h4>
+                    <p>McCrone House<br>Leighton Road<br>London NW5</p>
+                </div>
+                <div class="footer-contact-block">
+                    <h4>Phone & Email</h4>
+                    <p><a href="mailto:saraposs4@gmail.com">saraposs4@gmail.com</a></p>
+                    <p><a href="tel:+447903539734">+44 7903 539 734</a></p>
+                </div>
+            </div>
+
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="#" class="footer-link">Home</a>
                 <a href="#" class="footer-link">Systemic Therapy</a>
@@ -445,6 +461,13 @@
         "description": "UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online.",
         "email": "saraposs4@gmail.com",
         "telephone": "+447903539734",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "McCrone House, Leighton Road",
+            "addressLocality": "London",
+            "postalCode": "NW5",
+            "addressCountry": "GB"
+        },
         "areaServed": [
             { "@type": "City", "name": "London" },
             { "@type": "AdministrativeArea", "name": "North London" }
