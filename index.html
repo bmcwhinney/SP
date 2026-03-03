@@ -90,7 +90,7 @@
         .services { padding: 100px 0; }
         .services-intro { text-align: center; max-width: 800px; margin: 0 auto 60px; }
         .services-intro h2 { font-size: 2.5rem; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 40px; }
         .service-card { background: var(--white); padding: 50px 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); display: flex; flex-direction: column; height: 100%; border-top: 3px solid var(--teal); transition: transform var(--transition-speed), box-shadow var(--transition-speed); }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
         .service-card h3 { font-size: 1.8rem; margin-bottom: 20px; }
@@ -172,23 +172,31 @@
         }
 
         @media (max-width: 768px) {
-            .hero { padding: 100px 24px; }
-            .hero p { font-size: 1.1rem; }
-            .hero .hero-tagline { font-size: 0.85rem; letter-spacing: 1.5px; }
-            .services { padding: 60px 0; }
-            .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 2rem; }
-            .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .about-image { max-width: 400px; margin: 0 auto; }
-            .service-card { padding: 30px 20px; }
-            .quote { font-size: 1.3rem; }
-            .trust-banner { flex-direction: column; gap: 10px; }
-            .services-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
+            .hero { padding: 80px 20px; }
+            .hero p { font-size: 1.05rem; }
+            .hero .hero-tagline { font-size: 0.8rem; letter-spacing: 1.5px; }
+            .services { padding: 50px 0; }
+            .services-intro { margin-bottom: 40px; }
+            .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 1.75rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 32px; }
+            .about-image { max-width: 340px; margin: 0 auto; }
+            .service-card { padding: 32px 24px; }
+            .service-card h3 { font-size: 1.5rem; }
+            .quote { font-size: 1.2rem; }
+            .trust-banner { flex-direction: column; gap: 8px; font-size: 0.85rem; padding: 16px 20px; }
+            .services-grid { grid-template-columns: 1fr; gap: 24px; }
             .pain-points-grid { grid-template-columns: 1fr; }
-            .who-i-help { padding: 60px 0; }
-            .about { padding: 60px 0; }
+            .pain-point { padding: 24px 20px; }
+            .who-i-help { padding: 50px 0; }
+            .who-intro { margin-bottom: 32px; }
+            .about { padding: 50px 0; }
+            .testimonials { padding: 60px 0; }
+            footer { padding: 50px 20px; }
             .footer-cta { width: 100%; }
-            .accreditation-badges { gap: 32px; }
-            .accreditation-badges img { height: 45px; max-width: 180px; }
+            .footer-nav { gap: 10px 24px; }
+            .accreditation-badges { gap: 28px; }
+            .accreditation-badges img { height: 42px; max-width: 170px; }
         }
 
         @media (max-width: 768px) {
@@ -198,11 +206,15 @@
         }
 
         @media (max-width: 400px) {
-            .hero p { font-size: 1rem; }
-            .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 1.6rem; }
-            .hero .hero-tagline { font-size: 0.8rem; }
-            .quote { font-size: 1.15rem; }
-            .service-card h3 { font-size: 1.4rem; }
+            .container { padding: 0 16px; }
+            .hero { padding: 70px 16px; }
+            .hero p { font-size: 0.95rem; }
+            .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 1.5rem; }
+            .hero .hero-tagline { font-size: 0.75rem; }
+            .quote { font-size: 1.1rem; }
+            .service-card h3 { font-size: 1.35rem; }
+            .service-card { padding: 28px 20px; }
+            footer { padding: 40px 16px; }
         }
     </style>
 </head>
