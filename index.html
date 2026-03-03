@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Poss Therapy | Systemic Therapist North London & Online</title>
+    <meta name="description" content="Sara Poss — UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online. Book a free discovery call.">
+    <meta property="og:title" content="Sara Poss Therapy | Systemic Therapist North London & Online">
+    <meta property="og:description" content="UKCP-registered systemic therapist in North London offering individual, couples, and family therapy alongside transformative Family Constellation sessions. In-person & online.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Brand Variables --- */
+        :root {
+            --bg-color: #F8F6F0; /* Soft oat/beige */
+            --text-primary: #2C4A3B; /* Deep forest green */
+            --text-secondary: #4A4A4A; /* Slate grey */
+            --accent-color: #C87961; /* Muted terracotta */
+            --accent-hover: #A8624E;
+            --teal: #2A9D8F;
+            --teal-dark: #238578;
+            --white: #FFFFFF;
+            --font-heading: 'DM Serif Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Global Resets & Typography --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent-color); color: var(--white); padding: 12px 24px; border-radius: 0 0 8px 8px; z-index: 9999; font-weight: 500; }
+        .skip-link:focus { top: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--text-secondary); background-color: var(--bg-color); line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        body.menu-open { overflow: hidden; }
+        h1, h2, h3 { font-family: var(--font-heading); color: var(--text-primary); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; }
+        a { text-decoration: none; color: var(--text-primary); transition: color var(--transition-speed); }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* --- Buttons --- */
+        .btn { display: inline-block; background-color: var(--accent-color); color: var(--white); padding: 14px 32px; border-radius: 8px; font-weight: 500; transition: all var(--transition-speed); text-align: center; margin-top: 1rem; cursor: pointer; border: 2px solid var(--accent-color); font-size: 0.95rem; }
+        .btn:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); color: var(--white); }
+        .btn-outline { background: transparent; color: var(--teal); border-color: var(--teal); }
+        .btn-outline:hover { background-color: var(--teal); color: var(--white); border-color: var(--teal); }
+        .btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+
+        /* --- Header & Navigation --- */
+        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; max-width: 1200px; margin: 0 auto; position: relative; }
+        .logo { z-index: 1001; display: flex; align-items: center; }
+        .logo img { height: 60px; width: auto; }
+        
+        /* Desktop Nav */
+        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+        .nav-links li a { font-weight: 500; font-size: 0.9rem; }
+        .nav-links li a:hover { color: var(--accent-color); }
+        
+        /* Dropdowns */
+        .dropdown { position: relative; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; background-color: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.08); list-style: none; min-width: 260px; border-top: 3px solid var(--teal); opacity: 0; visibility: hidden; transition: all var(--transition-speed); transform: translateY(10px); border-radius: 0 0 4px 4px; overflow: hidden; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu li { border-bottom: 1px solid #F0F0F0; }
+        .dropdown-menu li:last-child { border-bottom: none; }
+        .dropdown-menu li a { display: block; padding: 14px 20px; font-size: 0.9rem; font-weight: 400; }
+        .dropdown-menu li a:hover { background-color: var(--bg-color); color: var(--accent-color); padding-left: 25px; } /* Subtle hover indent */
+
+        /* Hamburger Menu Button (Hidden on Desktop) */
+        .menu-toggle { display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; z-index: 1001; background: transparent; border: none; }
+        .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--text-primary); border-radius: 3px; transition: all 0.3s; }
+
+        /* --- Hero Section --- */
+        .hero { 
+            background: linear-gradient(rgba(44, 74, 59, 0.78), rgba(44, 74, 59, 0.65)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; 
+            color: var(--white); text-align: center; padding: 160px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; 
+        }
+        .hero h1 { color: var(--white); font-size: 3.5rem; margin-bottom: 28px; max-width: 900px; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        .hero p { font-size: 1.2rem; max-width: 650px; margin: 0 auto 40px; font-weight: 400; }
+        .hero .hero-tagline { font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 16px; opacity: 0.95; max-width: none; font-weight: 500; }
+
+        /* --- Trust Banner --- */
+        .trust-banner { background-color: var(--teal); padding: 18px 24px; text-align: center; font-size: 0.9rem; color: var(--white); font-weight: 400; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 24px; }
+        .trust-banner strong { font-weight: 700; }
+
+        /* --- Services Section --- */
+        .services { padding: 100px 0; }
+        .services-intro { text-align: center; max-width: 800px; margin: 0 auto 60px; }
+        .services-intro h2 { font-size: 2.5rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .service-card { background: var(--white); padding: 50px 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); display: flex; flex-direction: column; height: 100%; border-top: 3px solid var(--teal); transition: transform var(--transition-speed), box-shadow var(--transition-speed); }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .service-card h3 { font-size: 1.8rem; margin-bottom: 20px; }
+        .service-card p { flex-grow: 1; margin-bottom: 30px; }
+
+        /* --- Testimonials --- */
+        .testimonials { background-color: var(--text-primary); color: var(--white); padding: 100px 0; text-align: center; }
+        .testimonials h2 { color: var(--white); font-size: 2.5rem; }
+        .quote { font-family: var(--font-heading); font-style: italic; font-size: 1.5rem; max-width: 800px; margin: 40px auto; line-height: 1.6; font-weight: 400; }
+        .google-link { color: #E8D5C4; text-decoration: underline; margin-top: 20px; display: inline-block; font-weight: 700; }
+        .google-link:hover { color: var(--white); }
+
+        /* --- Footer --- */
+        footer { background-color: var(--white); padding: 60px 24px; text-align: center; border-top: 3px solid var(--teal); }
+        footer h3 { font-size: 2rem; }
+        footer p { margin-bottom: 20px; }
+        .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; margin-top: 40px; padding-top: 36px; border-top: 1px solid #EAEAEA; }
+        .footer-legal { margin-top: 24px; font-size: 0.85rem; color: #888; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .footer-link { color: var(--text-primary); font-size: 0.9rem; font-weight: 500; }
+        .footer-link:hover { color: var(--teal); }
+        .accreditation-badges { display: flex; justify-content: center; align-items: center; gap: 48px; margin-top: 36px; padding-top: 36px; border-top: 1px solid #EAEAEA; flex-wrap: wrap; }
+        .accreditation-badges img { height: 55px; width: auto; max-width: 220px; object-fit: contain; opacity: 0.8; transition: opacity var(--transition-speed); }
+        .accreditation-badges img:hover { opacity: 1; }
+
+        /* --- Who I Help Section --- */
+        .who-i-help { background-color: var(--white); padding: 80px 0; }
+        .who-intro { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .who-intro h2 { font-size: 2.5rem; }
+        .pain-points-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .pain-point { padding: 32px; background: var(--bg-color); border-radius: 8px; border-left: 3px solid var(--accent-color); }
+        .pain-point h3 { font-size: 1.05rem; font-family: var(--font-body); font-weight: 600; margin-bottom: 10px; }
+        .pain-point p { font-size: 0.95rem; margin: 0; }
+
+        /* --- About Section --- */
+        .about { background-color: var(--white); padding: 100px 0; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: center; }
+        .about-image img { border-radius: 8px; width: 100%; object-fit: cover; max-height: 520px; }
+        .about-content h2 { font-size: 2.5rem; }
+        .about-content p { margin-bottom: 16px; }
+
+        /* --- Nav CTA --- */
+        .nav-cta { margin-top: 0; }
+        .footer-cta { margin-bottom: 20px; }
+
+        /* --- WhatsApp Widget --- */
+        .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: var(--teal); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); }
+        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: var(--white); }
+        .whatsapp-float .tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: var(--text-primary); color: var(--white); font-size: 0.8rem; font-weight: 500; padding: 8px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all var(--transition-speed); pointer-events: none; }
+        .whatsapp-float .tooltip::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right: none; border-left-color: var(--text-primary); }
+        .whatsapp-float:hover .tooltip { opacity: 1; visibility: visible; }
+        @keyframes wa-pulse { 0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.18); } 50% { box-shadow: 0 4px 16px rgba(42,157,143,0.5); } }
+        .whatsapp-float.pulse { animation: wa-pulse 2s ease 3; }
+
+        /* --- Mobile Overlay --- */
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 999; opacity: 0; visibility: hidden; transition: all var(--transition-speed); }
+        .overlay.active { opacity: 1; visibility: visible; }
+
+        /* =========================================
+           MOBILE RESPONSIVE STYLES 
+           ========================================= */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.8rem; }
+            .hero { padding: 120px 24px; min-height: 60vh; }
+            .pain-points-grid { grid-template-columns: repeat(2, 1fr); }
+            .pain-points-grid .pain-point:last-child { grid-column: 1 / -1; }
+
+            /* Hamburger triggers at tablet — nav items don't fit below ~950px */
+            .menu-toggle { display: flex; }
+            .nav-links { position: fixed; top: 0; right: -100%; width: 80%; max-width: 360px; height: 100vh; height: 100dvh; background-color: var(--white); flex-direction: column; align-items: flex-start; padding: 100px 30px 40px; gap: 20px; box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: right 0.4s ease; overflow-y: auto; z-index: 1000; }
+            .nav-links.active { right: 0; }
+            .nav-links li { width: 100%; }
+            .nav-links li a { display: block; font-size: 1.1rem; padding: 10px 0; border-bottom: 1px solid #eee; }
+            .dropdown-menu { position: static; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; display: none; background-color: var(--bg-color); border-radius: 0; margin-top: 10px; }
+            .dropdown.active .dropdown-menu { display: block; }
+            .dropdown-menu li a { font-size: 1rem; padding: 12px 20px; border-bottom: none; }
+            .menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+            .menu-toggle.active span:nth-child(2) { opacity: 0; }
+            .menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 100px 24px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .hero .hero-tagline { font-size: 0.85rem; letter-spacing: 1.5px; }
+            .services { padding: 60px 0; }
+            .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 2rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .about-image { max-width: 400px; margin: 0 auto; }
+            .service-card { padding: 30px 20px; }
+            .quote { font-size: 1.3rem; }
+            .trust-banner { flex-direction: column; gap: 10px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .pain-points-grid { grid-template-columns: 1fr; }
+            .who-i-help { padding: 60px 0; }
+            .about { padding: 60px 0; }
+            .footer-cta { width: 100%; }
+            .accreditation-badges { gap: 32px; }
+            .accreditation-badges img { height: 45px; max-width: 180px; }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+            .whatsapp-float svg { width: 24px; height: 24px; }
+            .whatsapp-float .tooltip { display: none; }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 1.6rem; }
+            .hero .hero-tagline { font-size: 0.8rem; }
+            .quote { font-size: 1.15rem; }
+            .service-card h3 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div class="overlay" aria-hidden="true"></div>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="#" class="logo"><img src="SaraPOSSLOGO.png" alt="Sara Poss Therapy" width="283" height="162"></a>
+            
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-expanded="false">Systemic Therapy ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Overview & Fees</a></li>
+                        <li><a href="#">Individual Systemic Therapy</a></li>
+                        <li><a href="#">Relationship & Couples Therapy</a></li>
+                        <li><a href="#">Family Therapy</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-expanded="false">Family Constellations ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Overview & Fees</a></li>
+                        <li><a href="#">1:1 Sessions</a></li>
+                        <li><a href="#">Family Constellations Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="mailto:saraposs4@gmail.com" class="btn nav-cta">Book Discovery Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <p class="hero-tagline">Systemic Therapist in North London | Online Therapy Available</p>
+                <h1>Systemic Therapy & Family Constellations</h1>
+                <p>Whether you're navigating relationship difficulties, feeling weighed down by family patterns, or searching for a deeper understanding of yourself — I'm here to help.</p>
+                <a href="mailto:saraposs4@gmail.com" class="btn">Book a Free Discovery Call</a>
+            </div>
+        </section>
+
+        <div class="trust-banner">
+            <span>Registered & Accredited:</span>
+            <span><strong>UKCP</strong> (UK Council for Psychotherapy)</span>
+            <span><strong>DGSF</strong> (German Society for Systemic Therapy)</span>
+        </div>
+
+        <section class="who-i-help">
+            <div class="container">
+                <div class="who-intro">
+                    <h2>Is This You?</h2>
+                    <p>You don't have to have it all figured out to reach out. Many of my clients come to me when they're experiencing...</p>
+                </div>
+                <div class="pain-points-grid">
+                    <div class="pain-point">
+                        <h3>Feeling stuck in repeating patterns</h3>
+                        <p>The same conflicts, the same dynamics, the same outcomes — despite your best efforts to change.</p>
+                    </div>
+                    <div class="pain-point">
+                        <h3>Relationship difficulties</h3>
+                        <p>Communication breakdowns, growing distance, or recurring tension with your partner, family, or loved ones.</p>
+                    </div>
+                    <div class="pain-point">
+                        <h3>Carrying weight that isn't yours</h3>
+                        <p>A sense of heaviness, loyalty, or responsibility that seems to run deeper than your own experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services container">
+            <div class="services-intro">
+                <h2>How I Can Help</h2>
+                <p>I offer two complementary approaches to help you uncover the root of your challenges and find lasting resolution.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Systemic Therapy</h3>
+                    <p>We don't exist in isolation. Systemic therapy looks at your life through the lens of your relationships — your family, your partnership, and your environment. Together, we explore these dynamics to break unhelpful cycles, improve communication, and restore balance.</p>
+                    <a href="#" class="btn btn-outline">Explore Systemic Therapy</a>
+                </div>
+                <div class="service-card">
+                    <h3>Family Constellations</h3>
+                    <p>Sometimes, the roadblocks we face belong to the generations that came before us. Family Constellations is a profound method that reveals hidden family dynamics and unconscious loyalties, allowing you to release inherited trauma and step into your own life.</p>
+                    <a href="#" class="btn btn-outline">Explore Constellations</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="sara-photo.jpg" alt="Sara Poss — Systemic Therapist and Family Constellations Facilitator" loading="lazy" width="700" height="1050">
+                </div>
+                <div class="about-content">
+                    <h2>About Sara</h2>
+                    <p>I'm Sara Poss, a UKCP-registered systemic therapist and DGSF-certified family constellations facilitator. I work with individuals, couples, and families to help them understand the hidden dynamics shaping their lives and relationships.</p>
+                    <p>My training spans both the UK and Germany, giving me a unique perspective that bridges different therapeutic traditions. I believe that lasting change happens when we look beyond the individual — at the systems, patterns, and loyalties that connect us to those around us and to the generations before.</p>
+                    <a href="mailto:saraposs4@gmail.com" class="btn">Book a Free Discovery Call</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Clients Say</h2>
+                <p class="quote">"Sara provided an incredibly safe space. The constellation workshop completely shifted how I view my family dynamics. Highly recommended."</p>
+                <p>— Previous Workshop Participant</p>
+                <a href="https://share.google/6ab9A8Tqsr8ki2pij" class="google-link" target="_blank" rel="noopener">Read more on Google Reviews</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>Ready to take the next step?</h3>
+            <p>Reach out to discuss how we can work together.</p>
+            <a href="mailto:saraposs4@gmail.com" class="btn footer-cta">Book a Free Discovery Call</a>
+            
+            <div class="accreditation-badges">
+                <img src="UKCP.png" alt="UKCP - UK Council for Psychotherapy, Professional Standards Authority Accredited Register" loading="lazy" width="500" height="143">
+                <img src="DGSF.png" alt="DGSF - Deutsche Gesellschaft für Systemische Therapie, Beratung und Familientherapie" loading="lazy" width="834" height="246">
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">Systemic Therapy</a>
+                <a href="#" class="footer-link">Family Constellations</a>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">FAQs</a>
+            </nav>
+
+            <div class="footer-legal">
+                <p>&copy; 2026 Sara Poss Therapy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/447903539734?text=Hi%20Sara%2C%20I%20found%20your%20website%20and%20I%E2%80%99d%20love%20to%20find%20out%20more." class="whatsapp-float pulse" target="_blank" rel="noopener" aria-label="Message Sara on WhatsApp">
+        <span class="tooltip">Message Sara on WhatsApp</span>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.overlay');
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            const navLinkItems = document.querySelectorAll('.nav-links li a:not(.dropdown-toggle)');
+
+            function closeMenu() {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            overlay.addEventListener('click', closeMenu);
+
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 992) closeMenu();
+                });
+            });
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        const parent = toggle.parentElement;
+                        document.querySelectorAll('.dropdown').forEach(d => {
+                            if (d !== parent) {
+                                d.classList.remove('active');
+                                d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+                            }
+                        });
+                        const isOpen = parent.classList.toggle('active');
+                        toggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 992) {
+                    closeMenu();
+                    document.querySelectorAll('.dropdown').forEach(d => {
+                        d.classList.remove('active');
+                        d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Sara Poss Therapy",
+        "description": "UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online.",
+        "email": "saraposs4@gmail.com",
+        "telephone": "+447903539734",
+        "areaServed": [
+            { "@type": "City", "name": "London" },
+            { "@type": "AdministrativeArea", "name": "North London" }
+        ],
+        "availableChannel": [
+            { "@type": "ServiceChannel", "name": "In-person (North London)" },
+            { "@type": "ServiceChannel", "name": "Online" }
+        ],
+        "serviceType": ["Systemic Therapy", "Family Constellations", "Couples Therapy", "Family Therapy"],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Professional Registration",
+                "recognizedBy": { "@type": "Organization", "name": "UKCP - UK Council for Psychotherapy" }
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Professional Membership",
+                "recognizedBy": { "@type": "Organization", "name": "DGSF - Deutsche Gesellschaft für Systemische Therapie" }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
