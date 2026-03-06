@@ -8,7 +8,6 @@
     <meta property="og:title" content="Sara Poss Therapy | Systemic Therapist North London & Online">
     <meta property="og:description" content="UKCP-registered systemic therapist in North London offering individual, couples, and family therapy alongside transformative Family Constellation sessions. In-person & online.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="">
     <link rel="preload" as="image" href="bird image.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -222,7 +221,7 @@
             .container { padding: 0 16px; }
             .hero { padding: 70px 16px; }
             .hero p { font-size: 0.95rem; }
-            .services { padding-top: 60px; }
+            .services { padding-top: 60px !important; padding-bottom: 60px !important; }
             .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 1.5rem; }
             .hero .hero-tagline { font-size: 0.75rem; }
             .quote { font-size: 1.1rem; }
@@ -234,7 +233,7 @@
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to content</a>
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">Skip to content</a>
     <div class="overlay" aria-hidden="true"></div>
 
     <header>
@@ -466,14 +465,13 @@
             /* --- Language Toggle --- */
             const translations = {
                 en: {
+                    skip_link: 'Skip to content',
                     nav_home: 'Home',
                     nav_systemic: 'Systemic Therapy ▾',
-                    nav_overview_fees: 'Overview & Fees',
                     nav_individual: 'Individual Systemic Therapy',
                     nav_couples: 'Relationship & Couples Therapy',
                     nav_family: 'Family Therapy',
                     nav_constellations: 'Family Constellations ▾',
-                    nav_const_overview: 'Overview & Fees',
                     nav_const_11: '1:1 Sessions',
                     nav_const_workshops: 'Family Constellations Workshops',
                     nav_about: 'About',
@@ -528,14 +526,13 @@
                     meta_description: 'Sara Poss \u2014 UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online. Book a free discovery call.'
                 },
                 de: {
+                    skip_link: 'Zum Inhalt springen',
                     nav_home: 'Startseite',
                     nav_systemic: 'Systemische Therapie ▾',
-                    nav_overview_fees: '\u00dcbersicht & Preise',
                     nav_individual: 'Einzeltherapie',
                     nav_couples: 'Paar- & Beziehungstherapie',
                     nav_family: 'Familientherapie',
                     nav_constellations: 'Familienaufstellungen ▾',
-                    nav_const_overview: '\u00dcbersicht & Preise',
                     nav_const_11: 'Einzelsitzungen',
                     nav_const_workshops: 'Familienaufstellungs-Workshops',
                     nav_about: '\u00dcber mich',
