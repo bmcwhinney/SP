@@ -141,11 +141,11 @@
         .about-content p { margin-bottom: 16px; }
 
         /* --- Language Toggle --- */
-        .lang-toggle { display: flex; align-items: center; gap: 0; font-size: 0.85rem; font-weight: 600; font-family: var(--font-body); }
-        .lang-toggle button { background: none; border: none; cursor: pointer; padding: 4px 8px; font-size: 0.85rem; font-weight: 600; font-family: var(--font-body); color: var(--taupe); transition: color var(--transition-speed); }
-        .lang-toggle button.active { color: var(--text-primary); }
-        .lang-toggle button:hover { color: var(--accent-color); }
-        .lang-toggle span { color: var(--taupe); font-weight: 300; }
+        .lang-toggle { display: flex; align-items: center; gap: 6px; position: absolute; right: 70px; top: 50%; transform: translateY(-50%); }
+        .lang-toggle button { background: none; border: 2px solid transparent; cursor: pointer; padding: 0; font-size: 1.4rem; line-height: 1; border-radius: 4px; transition: all var(--transition-speed); opacity: 0.45; width: 32px; height: 24px; display: flex; align-items: center; justify-content: center; }
+        .lang-toggle button.active { opacity: 1; border-color: var(--dusty-blue); }
+        .lang-toggle button:hover { opacity: 0.85; }
+        @media (max-width: 992px) { .lang-toggle { right: 70px; } }
 
         /* --- Nav CTA --- */
         .nav-cta { margin-top: 0; }
@@ -242,9 +242,8 @@
             <a href="#" class="logo"><img src="SaraPOSSLOGO.png" alt="Sara Poss Therapy" width="283" height="162"></a>
             
             <div class="lang-toggle">
-                <button id="lang-en" class="active" aria-label="English">EN</button>
-                <span>|</span>
-                <button id="lang-de" aria-label="Deutsch">DE</button>
+                <button id="lang-en" class="active" aria-label="English">🇬🇧</button>
+                <button id="lang-de" aria-label="Deutsch">🇩🇪</button>
             </div>
 
             <button class="menu-toggle" aria-label="Toggle Navigation">
