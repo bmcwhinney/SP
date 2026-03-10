@@ -30,7 +30,7 @@
                             <a href="#" class="submenu-toggle" data-i18n="nav_const_workshops">Family Constellations Workshops ▾</a>
                             <ul class="submenu">
                                 <li><a href="workshops.html" data-i18n="nav_const_open">Open Group Workshops</a></li>
-                                <li><a href="#" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
+                                <li><a href="bespoke-workshops.html" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
                             </ul>
                         </li>
                     </ul>
