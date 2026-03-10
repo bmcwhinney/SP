@@ -195,13 +195,21 @@
         localStorage.setItem('sp-lang', lang);
     }
 
+    var langInitialized = false;
     function initLang() {
+        if (langInitialized) return;
         const langEn = document.getElementById('lang-en');
         const langDe = document.getElementById('lang-de');
-        if (langEn) langEn.addEventListener('click', () => setLanguage('en'));
-        if (langDe) langDe.addEventListener('click', () => setLanguage('de'));
+        if (!langEn || !langDe) return;
+        langInitialized = true;
+        langEn.addEventListener('click', () => setLanguage('en'));
+        langDe.addEventListener('click', () => setLanguage('de'));
         const saved = localStorage.getItem('sp-lang');
         if (saved && saved !== 'en') setLanguage(saved);
     }
-    document.addEventListener('DOMContentLoaded', initLang);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLang);
+    } else {
+        initLang();
+    }
 })();
