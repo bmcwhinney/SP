@@ -62,6 +62,16 @@
             fnav_faqs: 'FAQs',
             footer_legal: '© 2026 Sara Poss Therapy. All rights reserved.',
             wa_tooltip: 'Message Sara on WhatsApp',
+            page_contact_title: 'Contact',
+            page_contact_tagline: 'Begin your journey',
+            page_11_title: '1:1 Family Constellations Sessions',
+            page_11_tagline: 'One-to-one sessions in North London or online via Zoom',
+            page_workshops_title: 'Family Constellations Workshops',
+            page_workshops_tagline: 'Open Group Workshops',
+            page_bespoke_title: 'Bespoke Workshops',
+            page_bespoke_tagline: 'Bespoke Workshops for Groups & Organisations',
+            page_systemic_title: 'Systemic Therapy for Individuals, Couples & Families',
+            page_systemic_tagline: 'Evidence-based psychotherapy in North London or online via Zoom',
             pages: {
                 index: { page_title: 'Sara Poss Therapy | Systemic Therapist North London & Online', meta_description: 'Sara Poss, UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online. Book a free discovery call.' },
                 contact: { page_title: 'Contact | Sara Poss Therapy', meta_description: 'Get in touch with Sara Poss for systemic therapy and Family Constellations. Book a complimentary introductory call.' },
@@ -130,6 +140,16 @@
             fnav_faqs: 'Häufige Fragen',
             footer_legal: '© 2026 Sara Poss Therapy. Alle Rechte vorbehalten.',
             wa_tooltip: 'Sara auf WhatsApp schreiben',
+            page_contact_title: 'Kontakt',
+            page_contact_tagline: 'Beginnen Sie Ihre Reise',
+            page_11_title: '1:1 Familienaufstellungen',
+            page_11_tagline: 'Einzelsitzungen in Nord-London oder online via Zoom',
+            page_workshops_title: 'Familienaufstellungs-Workshops',
+            page_workshops_tagline: 'Offene Gruppenworkshops',
+            page_bespoke_title: 'Maßgeschneiderte Workshops',
+            page_bespoke_tagline: 'Maßgeschneiderte Workshops für Gruppen & Organisationen',
+            page_systemic_title: 'Systemische Therapie für Einzelpersonen, Paare & Familien',
+            page_systemic_tagline: 'Evidenzbasierte Psychotherapie in Nord-London oder online via Zoom',
             pages: {
                 index: { page_title: 'Sara Poss Therapie | Systemische Therapeutin Nord-London & Online', meta_description: 'Sara Poss, UKCP-registrierte systemische Therapeutin in Nord-London. Systemische Therapie und Familienaufstellungen für Einzelpersonen, Paare und Familien. Vor Ort & online.' },
                 contact: { page_title: 'Kontakt | Sara Poss Therapie', meta_description: 'Kontaktieren Sie Sara Poss für systemische Therapie und Familienaufstellungen. Vereinbaren Sie ein kostenloses Erstgespräch.' },
@@ -175,12 +195,13 @@
         localStorage.setItem('sp-lang', lang);
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    function initLang() {
         const langEn = document.getElementById('lang-en');
         const langDe = document.getElementById('lang-de');
         if (langEn) langEn.addEventListener('click', () => setLanguage('en'));
         if (langDe) langDe.addEventListener('click', () => setLanguage('de'));
         const saved = localStorage.getItem('sp-lang');
         if (saved && saved !== 'en') setLanguage(saved);
-    });
+    }
+    document.addEventListener('DOMContentLoaded', initLang);
 })();
