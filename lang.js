@@ -339,8 +339,10 @@
     };
 
     function getPageKey() {
-        const path = window.location.pathname.split('/').pop() || 'index.html';
-        return path.replace('.html', '') || 'index';
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        const last = pathParts[pathParts.length - 1];
+        if (!last) return 'index';
+        return last.replace('.html', '');
     }
 
     function setLanguage(lang) {

@@ -6,36 +6,36 @@
     <div class="overlay" aria-hidden="true"></div>
     <header>
         <nav aria-label="Main navigation">
-            <a href="index.html" class="logo"><img src="SaraPOSSLOGO.png" alt="Sara Poss Therapy" width="283" height="162" decoding="async"></a>
+            <a href="/" class="logo"><img src="/SaraPOSSLOGO.png" alt="Sara Poss Therapy" width="283" height="162" decoding="async"></a>
             <button class="menu-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
             <div class="lang-toggle">
                 <button id="lang-en" class="active" aria-label="English">\u{1F1EC}\u{1F1E7}</button>
                 <button id="lang-de" aria-label="Deutsch">\u{1F1E9}\u{1F1EA}</button>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="/" data-i18n="nav_home">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" aria-expanded="false" data-i18n="nav_systemic">Systemic Therapy ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="systemic-therapy.html#individual" data-i18n="nav_individual">Individual Systemic Therapy</a></li>
-                        <li><a href="systemic-therapy.html#couples" data-i18n="nav_couples">Relationship &amp; Couples Therapy</a></li>
-                        <li><a href="systemic-therapy.html#family" data-i18n="nav_family">Family Therapy</a></li>
+                        <li><a href="/systemic-therapy#individual" data-i18n="nav_individual">Individual Systemic Therapy</a></li>
+                        <li><a href="/systemic-therapy#couples" data-i18n="nav_couples">Relationship &amp; Couples Therapy</a></li>
+                        <li><a href="/systemic-therapy#family" data-i18n="nav_family">Family Therapy</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" aria-expanded="false" data-i18n="nav_constellations">Family Constellations ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="1to1-sessions.html" data-i18n="nav_const_11">1:1 Sessions</a></li>
+                        <li><a href="/1to1-sessions" data-i18n="nav_const_11">1:1 Sessions</a></li>
                         <li class="has-submenu">
                             <a href="#" class="submenu-toggle" data-i18n="nav_const_workshops">Family Constellations Workshops ▾</a>
                             <ul class="submenu">
-                                <li><a href="workshops.html" data-i18n="nav_const_open">Open Group Workshops</a></li>
-                                <li><a href="bespoke-workshops.html" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
+                                <li><a href="/workshops" data-i18n="nav_const_open">Open Group Workshops</a></li>
+                                <li><a href="/bespoke-workshops" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="/contact" data-i18n="nav_contact">Contact</a></li>
                 <li><a href="mailto:saraposs4@gmail.com" class="btn nav-cta" data-i18n="nav_cta">Book Discovery Call</a></li>
             </ul>
         </nav>
@@ -116,8 +116,10 @@
                     e.preventDefault();
                     closeMenu();
                     const [path, hash] = href.split('#');
-                    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
-                    const samePage = hash && (!path || path === currentFile);
+                    const pathParts = window.location.pathname.split('/').filter(Boolean);
+                    const currentPath = pathParts[pathParts.length - 1] || '';
+                    const linkPath = (path || '').replace(/^\//, '').split('#')[0];
+                    const samePage = hash && (!linkPath || linkPath === currentPath);
                     if (hash && samePage) {
                         const target = document.getElementById(hash);
                         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });

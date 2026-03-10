@@ -1,0 +1,13 @@
+# Clean URLs: serve .html files at path without extension
+/contact              /contact.html              200
+/1to1-sessions        /1to1-sessions.html        200
+/workshops            /workshops.html            200
+/bespoke-workshops     /bespoke-workshops.html    200
+/systemic-therapy     /systemic-therapy.html     200
+
+# Redirect old .html URLs to clean URLs (301 permanent)
+/contact.html         /contact                   301
+/1to1-sessions.html   /1to1-sessions             301
+/workshops.html       /workshops                  301
+/bespoke-workshops.html /bespoke-workshops        301
+/systemic-therapy.html /systemic-therapy          301
