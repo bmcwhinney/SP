@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:1 Family Constellations Sessions | Sara Poss Therapy</title>
+    <meta name="description" content="One-to-one Family Constellations sessions with Sara Poss. Explore family dynamics, unconscious loyalties and generational patterns. In person in North London or online via Zoom.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #EDE6DD;
+            --text-primary: #3D352F;
+            --text-secondary: #5A524C;
+            --accent-color: #C4937B;
+            --accent-hover: #AC7C64;
+            --birds-egg: #AACCB9;
+            --dusty-blue: #A3B6BF;
+            --taupe: #B3A394;
+            --white: #FFFFFF;
+            --font-heading: 'DM Serif Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--text-secondary); background-color: var(--bg-color); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { font-family: var(--font-heading); color: var(--text-primary); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; }
+        a { text-decoration: none; color: var(--text-primary); transition: color var(--transition-speed); }
+        .container { width: 100%; max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        .btn { display: inline-block; background-color: var(--accent-color); color: var(--white); padding: 14px 32px; border-radius: 8px; font-weight: 500; transition: all var(--transition-speed); text-align: center; margin-top: 1rem; cursor: pointer; border: 2px solid var(--accent-color); font-size: 0.95rem; }
+        .btn:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); color: var(--white); }
+
+        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        nav { display: flex; align-items: center; padding: 20px 24px; max-width: 1200px; margin: 0 auto; gap: 12px; }
+        .logo { margin-right: auto; }
+        .logo img { height: 60px; width: auto; }
+        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+        .nav-links li a { font-weight: 500; font-size: 0.9rem; }
+        .nav-links li a:hover { color: var(--accent-color); }
+        .dropdown { position: relative; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; background-color: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.08); list-style: none; min-width: 260px; border-top: 3px solid var(--dusty-blue); opacity: 0; visibility: hidden; transition: all var(--transition-speed); transform: translateY(10px); border-radius: 0 0 4px 4px; overflow: hidden; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu li { border-bottom: 1px solid #F0F0F0; }
+        .dropdown-menu li:last-child { border-bottom: none; }
+        .dropdown-menu li a { display: block; padding: 14px 20px; font-size: 0.9rem; font-weight: 400; }
+        .dropdown-menu li a:hover { background-color: var(--bg-color); color: var(--accent-color); padding-left: 25px; }
+        .menu-toggle { display: none; }
+        .nav-cta { margin-top: 0; }
+
+        .page-hero { background-color: var(--white); padding: 80px 24px 60px; text-align: center; border-bottom: 3px solid var(--taupe); }
+        .page-hero h1 { font-size: 2.5rem; }
+        .page-hero .tagline { font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem; }
+
+        .trust-banner { background-color: #5B8390; padding: 18px 24px; text-align: center; font-size: 0.9rem; color: var(--white); font-weight: 400; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 24px; }
+        .trust-banner strong { font-weight: 700; }
+
+        .content-section { padding: 60px 0; }
+        .content-section:nth-child(even) { background-color: var(--white); }
+        .content-section h2 { font-size: 1.75rem; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--birds-egg); }
+        .content-section p { margin-bottom: 1rem; }
+        .content-section p:last-child { margin-bottom: 0; }
+        .content-section .highlight { background: #E6EDF0; padding: 24px; border-radius: 8px; border-left: 3px solid var(--accent-color); margin: 1.5rem 0; }
+
+        footer { background-color: var(--white); padding: 60px 24px; text-align: center; border-top: 3px solid var(--taupe); }
+        footer h3 { font-size: 2rem; }
+        footer p { margin-bottom: 20px; }
+        .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; margin-top: 40px; padding-top: 36px; border-top: 1px solid #EAEAEA; }
+        .footer-link { color: var(--text-primary); font-size: 0.9rem; font-weight: 500; }
+        .footer-link:hover { color: #748868; }
+        .footer-legal { margin-top: 24px; font-size: 0.85rem; color: #888; }
+        .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: #748868; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed); }
+        .whatsapp-float:hover { transform: scale(1.08); }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: var(--white); }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 999; opacity: 0; visibility: hidden; transition: all 0.3s; }
+        .overlay.active { opacity: 1; visibility: visible; }
+        body.menu-open { overflow: hidden; }
+
+        @media (max-width: 992px) {
+            .menu-toggle { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; background: transparent; border: none; }
+            .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--text-primary); border-radius: 3px; transition: all 0.3s; }
+            .nav-links { position: fixed; top: 0; right: -100%; width: 80%; max-width: 360px; height: 100vh; background-color: var(--white); flex-direction: column; align-items: flex-start; padding: 100px 30px 40px; gap: 20px; box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: right 0.4s ease; z-index: 1000; }
+            .nav-links.active { right: 0; }
+            .nav-links li { width: 100%; }
+            .nav-links li a { display: block; font-size: 1.1rem; padding: 10px 0; border-bottom: 1px solid #eee; }
+            .dropdown-menu { position: static; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; display: none; background-color: var(--bg-color); margin-top: 10px; }
+            .dropdown.active .dropdown-menu { display: block; }
+            .menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+            .menu-toggle.active span:nth-child(2) { opacity: 0; }
+            .menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            .page-hero { padding: 60px 20px 50px; }
+            .page-hero h1 { font-size: 1.75rem; }
+            .content-section { padding: 50px 0; }
+            .content-section h2 { font-size: 1.5rem; }
+            .trust-banner { flex-direction: column; gap: 8px; font-size: 0.85rem; padding: 16px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" aria-hidden="true"></div>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo"><img src="SaraPOSSLOGO.png" alt="Sara Poss Therapy" width="283" height="162"></a>
+            <button class="menu-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-expanded="false">Systemic Therapy ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#services">Individual Systemic Therapy</a></li>
+                        <li><a href="index.html#services">Relationship & Couples Therapy</a></li>
+                        <li><a href="index.html#services">Family Therapy</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-expanded="false">Family Constellations ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="1to1-sessions.html">1:1 Sessions</a></li>
+                        <li><a href="index.html#services">Family Constellations Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#main-content">About</a></li>
+                <li><a href="index.html#main-content">Contact</a></li>
+                <li><a href="mailto:saraposs4@gmail.com" class="btn nav-cta">Book Discovery Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <h1>1:1 Family Constellations Sessions</h1>
+                <p class="tagline">One-to-one sessions in North London or online via Zoom</p>
+            </div>
+        </section>
+
+        <div class="trust-banner">
+            <span>Registered & Accredited:</span>
+            <span><strong>UKCP</strong> (UK Council for Psychotherapy)</span>
+            <span><strong>DGSF</strong> (German Society for Systemic Therapy)</span>
+        </div>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>What is Family Constellations Therapy?</h2>
+                <p>Family Constellations Therapy (also known as Systemic Constellations) is a therapeutic approach that explores how family history, unconscious loyalties, and generational patterns can influence our lives today.</p>
+                <p>Many of the difficulties we experience, such as feeling stuck, repeating familiar patterns, or carrying emotions that don't quite feel like our own, can be connected to unresolved experiences within our family system. While these patterns may have been passed down through generations, they are not necessarily ours to carry.</p>
+                <p>Family Constellations Therapy brings awareness to these hidden dynamics, creating space for release, reconnection, and change. This work supports movement where things have felt inherited or stuck, and can help you reconnect more fully with yourself.</p>
+                <p>My approach is grounded in trauma-informed and psychological awareness, while also honouring the systemic and experiential nature of constellation work.</p>
+                <div class="highlight">
+                    <p><strong>1:1 sessions are approximately 2 hours in length.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>What to expect from a 1:1 session</h2>
+                <p>In a one-to-one Family Constellations session, we work together to explore a specific theme or question you bring. The process is experiential rather than purely conversational, allowing insight to emerge through felt experience as well as reflection.</p>
+                <p>No prior experience is needed. Sessions are offered in person at my London practice or online via Zoom, and take place at a pace that supports safety, regulation, and integration.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>How to prepare</h2>
+                <p>There is no formal preparation required. This work often unfolds gently and organically, meeting you where you are.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>After the session & integration</h2>
+                <p>Each session is unique, and people experience a wide range of responses: emotional, physical, reflective, or subtle. There is no "right" way to feel afterwards.</p>
+                <p>Family Constellations Therapy differs from ongoing weekly therapy. Sessions may stand alone, or be revisited when it feels supportive. If you choose to book another session, I recommend allowing at least 2–3 weeks between sessions to support integration.</p>
+                <p>Many people also find it helpful to integrate this work alongside other supportive approaches such as psychotherapy, somatic therapy, or body-based practices.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container" style="text-align: center;">
+                <h2>Ready to begin?</h2>
+                <p>Book a free discovery call to discuss whether 1:1 Family Constellations might be right for you.</p>
+                <a href="mailto:saraposs4@gmail.com" class="btn">Book a Free Discovery Call</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>Ready to take the next step?</h3>
+            <p>Reach out to discuss how we can work together.</p>
+            <a href="mailto:saraposs4@gmail.com" class="btn">Book a Free Discovery Call</a>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="index.html#services" class="footer-link">Systemic Therapy</a>
+                <a href="1to1-sessions.html" class="footer-link">1:1 Sessions</a>
+                <a href="index.html#main-content" class="footer-link">About</a>
+                <a href="index.html#main-content" class="footer-link">Contact</a>
+            </nav>
+            <div class="footer-legal">
+                <p>&copy; 2026 Sara Poss Therapy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/447903539734?text=Hi%20Sara%2C%20I%20found%20your%20website%20and%20I%E2%80%99d%20love%20to%20find%20out%20more%20about%201:1%20Family%20Constellations%20sessions." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Message Sara on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.overlay');
+            function closeMenu() {
+                navLinks?.classList.remove('active');
+                menuToggle?.classList.remove('active');
+                overlay?.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+            }
+            menuToggle?.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+            overlay?.addEventListener('click', closeMenu);
+            document.querySelectorAll('.dropdown-toggle').forEach(t => {
+                t.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 992) { e.preventDefault(); t.parentElement.classList.toggle('active'); }
+                });
+            });
+            document.querySelectorAll('.nav-links a').forEach(a => {
+                a.addEventListener('click', () => { if (window.innerWidth <= 992) closeMenu(); });
+            });
+        });
+    </script>
+</body>
+</html>
