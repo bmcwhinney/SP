@@ -15,7 +15,7 @@ nav { display: flex; align-items: center; padding: 20px 24px; max-width: 1200px;
 
 /* Dropdowns */
 .dropdown { position: relative; }
-.dropdown-menu { position: absolute; top: 100%; left: 0; background-color: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.08); list-style: none; min-width: 260px; border-top: 3px solid var(--dusty-blue); opacity: 0; visibility: hidden; transition: all var(--transition-speed); transform: translateY(10px); border-radius: 0 0 4px 4px; overflow: hidden; }
+.dropdown-menu { position: absolute; top: 100%; left: 0; background-color: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.08); list-style: none; min-width: 260px; border-top: 3px solid var(--dusty-blue); opacity: 0; visibility: hidden; transition: all var(--transition-speed); transform: translateY(10px); border-radius: 0 0 4px 4px; overflow: visible; }
 .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
 .dropdown-menu li { border-bottom: 1px solid #F0F0F0; }
 .dropdown-menu li:last-child { border-bottom: none; }
@@ -24,7 +24,7 @@ nav { display: flex; align-items: center; padding: 20px 24px; max-width: 1200px;
 
 /* Nested submenu (desktop) */
 .has-submenu { position: relative; }
-.submenu { position: absolute; top: 0; left: 100%; background-color: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.08); list-style: none; min-width: 240px; border-top: 3px solid var(--dusty-blue); opacity: 0; visibility: hidden; transition: all var(--transition-speed); transform: translateX(10px); border-radius: 0 0 4px 4px; overflow: hidden; }
+.submenu { position: absolute; top: 0; left: 100%; margin-left: -2px; background-color: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.08); list-style: none; min-width: 240px; border-top: 3px solid var(--dusty-blue); opacity: 0; visibility: hidden; transition: all var(--transition-speed); transform: translateX(10px); border-radius: 0 0 4px 4px; z-index: 10; }
 .has-submenu:hover > .submenu { opacity: 1; visibility: visible; transform: translateX(0); }
 .submenu li { border-bottom: 1px solid #F0F0F0; }
 .submenu li:last-child { border-bottom: none; }
