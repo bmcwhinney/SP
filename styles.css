@@ -1,0 +1,117 @@
+/* =========================================
+   SHARED BASE STYLES
+   Variables, resets, typography, buttons,
+   and common components used on every page
+   ========================================= */
+
+:root {
+    --bg-color: #EDE6DD;
+    --text-primary: #3D352F;
+    --text-secondary: #5A524C;
+    --accent-color: #C4937B;
+    --accent-hover: #AC7C64;
+    --teal: #748868;
+    --birds-egg: #AACCB9;
+    --dusty-blue: #A3B6BF;
+    --taupe: #B3A394;
+    --white: #FFFFFF;
+    --font-heading: 'DM Serif Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    background-color: var(--bg-color);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3 { font-family: var(--font-heading); color: var(--text-primary); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; }
+a { text-decoration: none; color: var(--text-primary); transition: color var(--transition-speed); }
+img { max-width: 100%; height: auto; display: block; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: 2px solid var(--accent-color);
+    font-size: 0.95rem;
+}
+.btn:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); color: var(--white); }
+.btn-outline { background: transparent; color: var(--birds-egg); border-color: var(--birds-egg); }
+.btn-outline:hover { background-color: var(--birds-egg); color: var(--white); border-color: var(--birds-egg); }
+.btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+
+/* Skip Link (accessibility) */
+.skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent-color); color: var(--white); padding: 12px 24px; border-radius: 0 0 8px 8px; z-index: 9999; font-weight: 500; }
+.skip-link:focus { top: 0; }
+
+/* Trust Banner */
+.trust-banner { background-color: #5B8390; padding: 18px 24px; text-align: center; font-size: 0.9rem; color: var(--white); font-weight: 400; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 24px; }
+.trust-banner strong { font-weight: 700; }
+
+/* Page Hero (subpages) */
+.page-hero { background-color: var(--white); padding: 80px 24px 60px; text-align: center; border-bottom: 3px solid var(--taupe); }
+.page-hero h1 { font-size: 2.5rem; }
+.page-hero .tagline { font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem; }
+
+/* Content Sections (subpages) */
+.content-section { padding: 60px 0; }
+.content-section:nth-child(even) { background-color: var(--white); }
+.content-section h2 { font-size: 1.75rem; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--birds-egg); }
+.content-section p { margin-bottom: 1rem; }
+.content-section p:last-child { margin-bottom: 0; }
+.content-section .highlight { background: #E6EDF0; padding: 24px; border-radius: 8px; border-left: 3px solid var(--accent-color); margin: 1.5rem 0; }
+
+/* Footer */
+footer { background-color: var(--white); padding: 60px 24px; text-align: center; border-top: 3px solid var(--taupe); }
+footer h3 { font-size: 2rem; }
+footer p { margin-bottom: 20px; }
+.footer-cta { margin-bottom: 20px; }
+.footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; margin-top: 40px; padding-top: 36px; border-top: 1px solid #EAEAEA; }
+.footer-link { color: var(--text-primary); font-size: 0.9rem; font-weight: 500; }
+.footer-link:hover { color: var(--teal); }
+.footer-legal { margin-top: 24px; font-size: 0.85rem; color: #888; }
+
+/* WhatsApp Float */
+.whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: var(--teal); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); }
+.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
+.whatsapp-float svg { width: 28px; height: 28px; fill: var(--white); }
+.whatsapp-float .tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: var(--text-primary); color: var(--white); font-size: 0.8rem; font-weight: 500; padding: 8px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all var(--transition-speed); pointer-events: none; }
+.whatsapp-float .tooltip::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right: none; border-left-color: var(--text-primary); }
+.whatsapp-float:hover .tooltip { opacity: 1; visibility: visible; }
+@keyframes wa-pulse { 0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.18); } 50% { box-shadow: 0 4px 16px rgba(116,136,104,0.5); } }
+.whatsapp-float.pulse { animation: wa-pulse 2s ease 3; }
+
+/* =========================================
+   SHARED RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .trust-banner { flex-direction: column; gap: 8px; font-size: 0.85rem; padding: 16px 20px; }
+    .page-hero { padding: 60px 20px 50px; }
+    .page-hero h1 { font-size: 1.75rem; }
+    .content-section { padding: 50px 0; }
+    .content-section h2 { font-size: 1.5rem; }
+    footer { padding: 50px 20px; }
+    .footer-cta { width: 100%; }
+    .footer-nav { gap: 10px 24px; }
+    .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+    .whatsapp-float svg { width: 24px; height: 24px; }
+    .whatsapp-float .tooltip { display: none; }
+}

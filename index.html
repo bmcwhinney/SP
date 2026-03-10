@@ -12,70 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
     
     <style>
-        /* --- Brand Variables --- */
-        :root {
-            --bg-color: #EDE6DD; /* Cloud Dancer */
-            --text-primary: #3D352F; /* Dark warm brown */
-            --text-secondary: #5A524C; /* Warm grey */
-            --accent-color: #C4937B; /* Soft Pink */
-            --accent-hover: #AC7C64;
-            --teal: #748868; /* Sea Foam */
-            --birds-egg: #AACCB9; /* Pantone 13-5911 TCX Bird's Egg Green */
-            --teal-dark: #637554;
-            --dusty-blue: #A3B6BF; /* Pantone 5445 C */
-            --taupe: #B3A394; /* Pantone 7528 C */
-            --white: #FFFFFF;
-            --font-heading: 'DM Serif Display', serif;
-            --font-body: 'Inter', sans-serif;
-            --transition-speed: 0.3s;
-        }
+        /* === HOMEPAGE-ONLY STYLES === */
 
-        /* --- Global Resets & Typography --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        .skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent-color); color: var(--white); padding: 12px 24px; border-radius: 0 0 8px 8px; z-index: 9999; font-weight: 500; }
-        .skip-link:focus { top: 0; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); color: var(--text-secondary); background-color: var(--bg-color); line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        body.menu-open { overflow: hidden; }
-        h1, h2, h3 { font-family: var(--font-heading); color: var(--text-primary); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; }
-        a { text-decoration: none; color: var(--text-primary); transition: color var(--transition-speed); }
-        img { max-width: 100%; height: auto; display: block; }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-        /* --- Buttons --- */
-        .btn { display: inline-block; background-color: var(--accent-color); color: var(--white); padding: 14px 32px; border-radius: 8px; font-weight: 500; transition: all var(--transition-speed); text-align: center; margin-top: 1rem; cursor: pointer; border: 2px solid var(--accent-color); font-size: 0.95rem; }
-        .btn:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); color: var(--white); }
-        .btn-outline { background: transparent; color: var(--birds-egg); border-color: var(--birds-egg); }
-        .btn-outline:hover { background-color: var(--birds-egg); color: var(--white); border-color: var(--birds-egg); }
-        .btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
-
-        /* --- Header & Navigation --- */
-        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        nav { display: flex; align-items: center; padding: 20px 24px; max-width: 1200px; margin: 0 auto; position: relative; gap: 12px; }
-        .logo { z-index: 1001; display: flex; align-items: center; margin-right: auto; }
-        .logo img { height: 60px; width: auto; }
-        
-        /* Desktop Nav */
-        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
-        .nav-links li a { font-weight: 500; font-size: 0.9rem; }
-        .nav-links li a:not(.btn):hover { color: var(--accent-color); }
-        
-        /* Dropdowns */
-        .dropdown { position: relative; }
-        .dropdown-menu { position: absolute; top: 100%; left: 0; background-color: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.08); list-style: none; min-width: 260px; border-top: 3px solid var(--dusty-blue); opacity: 0; visibility: hidden; transition: all var(--transition-speed); transform: translateY(10px); border-radius: 0 0 4px 4px; overflow: hidden; }
-        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-menu li { border-bottom: 1px solid #F0F0F0; }
-        .dropdown-menu li:last-child { border-bottom: none; }
-        .dropdown-menu li a { display: block; padding: 14px 20px; font-size: 0.9rem; font-weight: 400; }
-        .dropdown-menu li a:hover { background-color: var(--bg-color); color: var(--accent-color); padding-left: 25px; } /* Subtle hover indent */
-
-        /* Hamburger Menu Button (Hidden on Desktop) */
-        .menu-toggle { display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; z-index: 1001; background: transparent; border: none; }
-        .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--text-primary); border-radius: 3px; transition: all 0.3s; }
-
-        /* --- Hero Section --- */
         .hero { 
             background: url('bird image.jpeg') center/cover no-repeat; 
             color: #5A5A5A; text-align: center; padding: 160px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; 
@@ -84,11 +26,6 @@
         .hero p { font-size: 1.2rem; max-width: 650px; margin: 0 auto 40px; font-weight: 400; }
         .hero .hero-tagline { font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 16px; opacity: 0.95; max-width: none; font-weight: 500; }
 
-        /* --- Trust Banner --- */
-        .trust-banner { background-color: #5B8390; padding: 18px 24px; text-align: center; font-size: 0.9rem; color: var(--white); font-weight: 400; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 24px; }
-        .trust-banner strong { font-weight: 700; }
-
-        /* --- Services Section --- */
         .services { padding-top: 100px; padding-bottom: 100px; }
         .services-intro { text-align: center; max-width: 800px; margin: 0 auto 60px; }
         .services-intro h2 { font-size: 2.5rem; }
@@ -98,7 +35,6 @@
         .service-card h3 { font-size: 1.8rem; margin-bottom: 20px; }
         .service-card p { flex-grow: 1; margin-bottom: 30px; }
 
-        /* --- Testimonials --- */
         .testimonials { background-color: #263056; color: var(--white); padding-top: 100px; padding-bottom: 100px; text-align: center; }
         .testimonials h2 { color: var(--white); font-size: 2.5rem; }
         .quote { font-family: var(--font-heading); font-style: italic; font-size: 1.5rem; max-width: 800px; margin: 40px auto; line-height: 1.6; font-weight: 400; }
@@ -108,14 +44,7 @@
         .google-link { color: var(--white); text-decoration: underline; margin-top: 16px; display: inline-block; font-weight: 700; }
         .google-link:hover { color: var(--white); }
 
-        /* --- Footer --- */
-        footer { background-color: var(--white); padding: 60px 24px; text-align: center; border-top: 3px solid var(--taupe); }
-        footer h3 { font-size: 2rem; }
-        footer p { margin-bottom: 20px; }
-        .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; margin-top: 40px; padding-top: 36px; border-top: 1px solid #EAEAEA; }
-        .footer-legal { margin-top: 24px; font-size: 0.85rem; color: #888; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-        .footer-link { color: var(--text-primary); font-size: 0.9rem; font-weight: 500; }
-        .footer-link:hover { color: var(--teal); }
+        .footer-legal { display: flex; flex-direction: column; align-items: center; gap: 12px; }
         .footer-contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px; padding-top: 36px; border-top: 1px solid #EAEAEA; text-align: left; }
         .footer-contact-block h4 { font-family: var(--font-body); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: #999; margin-bottom: 8px; font-weight: 600; }
         .footer-contact-block p, .footer-contact-block a { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
@@ -124,7 +53,6 @@
         .accreditation-badges img { height: 55px; width: auto; max-width: 220px; object-fit: contain; opacity: 0.8; transition: opacity var(--transition-speed); }
         .accreditation-badges img:hover { opacity: 1; }
 
-        /* --- Who I Help Section --- */
         .who-i-help { background-color: var(--white); padding-top: 80px; padding-bottom: 80px; }
         .who-intro { text-align: center; max-width: 700px; margin: 0 auto 50px; }
         .who-intro h2 { font-size: 2.5rem; }
@@ -133,58 +61,16 @@
         .pain-point h3 { font-size: 1.05rem; font-family: var(--font-body); font-weight: 600; margin-bottom: 10px; }
         .pain-point p { font-size: 0.95rem; margin: 0; }
 
-        /* --- About Section --- */
         .about { background-color: var(--white); padding-top: 100px; padding-bottom: 100px; }
         .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: center; }
         .about-image img { border-radius: 8px; width: 100%; object-fit: cover; object-position: top; max-height: 520px; }
         .about-content h2 { font-size: 2.5rem; }
         .about-content p { margin-bottom: 16px; }
 
-        /* --- Language Toggle --- */
-        .lang-toggle { display: flex; align-items: center; gap: 6px; z-index: 1001; order: 3; }
-        .lang-toggle button { background: none; border: 2px solid transparent; cursor: pointer; padding: 0; font-size: 1.4rem; line-height: 1; border-radius: 4px; transition: all var(--transition-speed); opacity: 0.45; width: 32px; height: 24px; display: flex; align-items: center; justify-content: center; }
-        .lang-toggle button.active { opacity: 1; border-color: var(--dusty-blue); }
-        .lang-toggle button:hover { opacity: 0.85; }
-        @media (max-width: 992px) { .lang-toggle { order: 2; } .menu-toggle { order: 3; } }
-
-        /* --- Nav CTA --- */
-        .nav-cta { margin-top: 0; }
-        .footer-cta { margin-bottom: 20px; }
-
-        /* --- WhatsApp Widget --- */
-        .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: var(--teal); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); }
-        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
-        .whatsapp-float svg { width: 28px; height: 28px; fill: var(--white); }
-        .whatsapp-float .tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: var(--text-primary); color: var(--white); font-size: 0.8rem; font-weight: 500; padding: 8px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all var(--transition-speed); pointer-events: none; }
-        .whatsapp-float .tooltip::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right: none; border-left-color: var(--text-primary); }
-        .whatsapp-float:hover .tooltip { opacity: 1; visibility: visible; }
-        @keyframes wa-pulse { 0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.18); } 50% { box-shadow: 0 4px 16px rgba(116,136,104,0.5); } }
-        .whatsapp-float.pulse { animation: wa-pulse 2s ease 3; }
-
-        /* --- Mobile Overlay --- */
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 999; opacity: 0; visibility: hidden; transition: all var(--transition-speed); }
-        .overlay.active { opacity: 1; visibility: visible; }
-
-        /* =========================================
-           MOBILE RESPONSIVE STYLES 
-           ========================================= */
         @media (max-width: 992px) {
             .hero { padding: 120px 24px; min-height: 70vh; }
             .pain-points-grid { grid-template-columns: repeat(2, 1fr); }
             .pain-points-grid .pain-point:last-child { grid-column: 1 / -1; }
-
-            /* Hamburger triggers at tablet - nav items don't fit below ~950px */
-            .menu-toggle { display: flex; }
-            .nav-links { position: fixed; top: 0; right: -100%; width: 80%; max-width: 360px; height: 100vh; height: 100dvh; background-color: var(--white); flex-direction: column; align-items: flex-start; padding: 100px 30px 40px; gap: 20px; box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: right 0.4s ease; overflow-y: auto; z-index: 1000; }
-            .nav-links.active { right: 0; }
-            .nav-links li { width: 100%; }
-            .nav-links li a { display: block; font-size: 1.1rem; padding: 10px 0; border-bottom: 1px solid #eee; }
-            .dropdown-menu { position: static; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; display: none; background-color: var(--bg-color); border-radius: 0; margin-top: 10px; }
-            .dropdown.active .dropdown-menu { display: block; }
-            .dropdown-menu li a { font-size: 1rem; padding: 12px 20px; border-bottom: none; }
-            .menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-            .menu-toggle.active span:nth-child(2) { opacity: 0; }
-            .menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
         }
 
         @media (max-width: 768px) {
@@ -192,15 +78,14 @@
             .hero { padding: 80px 20px; min-height: 75vh; background: url('bird image.jpeg') 40% 60%/cover no-repeat; }
             .hero p { font-size: 1.05rem; }
             .hero .hero-tagline { font-size: 0.8rem; letter-spacing: 1.5px; }
-            .services { padding-top: 70px !important; padding-bottom: 70px !important; }
+            .services { padding: 70px 0; }
             .services-intro { margin-bottom: 40px; }
-            .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 1.75rem; }
+            .services-intro h2, .testimonials h2, .who-intro h2, .about-content h2 { font-size: 1.75rem; }
             .about-grid { grid-template-columns: 1fr; gap: 32px; }
             .about-image { max-width: 340px; margin: 0 auto; }
             .service-card { padding: 32px 24px; }
             .service-card h3 { font-size: 1.5rem; }
             .quote { font-size: 1.2rem; }
-            .trust-banner { flex-direction: column; gap: 8px; font-size: 0.85rem; padding: 16px 20px; }
             .services-grid { grid-template-columns: 1fr; gap: 24px; }
             .pain-points-grid { grid-template-columns: 1fr; }
             .pain-point { padding: 24px 20px; }
@@ -208,71 +93,28 @@
             .who-intro { margin-bottom: 32px; }
             .about { padding-top: 50px; padding-bottom: 50px; }
             .testimonials { padding-top: 60px; padding-bottom: 60px; }
-            footer { padding: 50px 20px; }
-            .footer-cta { width: 100%; }
-            .footer-nav { gap: 10px 24px; }
             .accreditation-badges { gap: 28px; }
             .accreditation-badges img { height: 42px; max-width: 170px; }
-            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
-            .whatsapp-float svg { width: 24px; height: 24px; }
-            .whatsapp-float .tooltip { display: none; }
         }
 
         @media (max-width: 400px) {
             .container { padding: 0 16px; }
             .hero { padding: 70px 16px; }
             .hero p { font-size: 0.95rem; }
-            .services { padding-top: 60px !important; padding-bottom: 60px !important; }
-            .services-intro h2, .testimonials h2, footer h3, .who-intro h2, .about-content h2 { font-size: 1.5rem; }
+            .services { padding: 60px 0; }
+            .services-intro h2, .testimonials h2, .who-intro h2, .about-content h2 { font-size: 1.5rem; }
             .hero .hero-tagline { font-size: 0.75rem; }
             .quote { font-size: 1.1rem; }
             .service-card h3 { font-size: 1.35rem; }
             .service-card { padding: 28px 20px; }
-            footer { padding: 40px 16px; }
         }
     </style>
 </head>
 <body>
 
     <a href="#main-content" class="skip-link" data-i18n="skip_link">Skip to content</a>
-    <div class="overlay" aria-hidden="true"></div>
-
-    <header>
-        <nav aria-label="Main navigation">
-            <a href="#" class="logo"><img src="SaraPOSSLOGO.png" alt="Sara Poss Therapy" width="283" height="162"></a>
-            
-            <button class="menu-toggle" aria-label="Toggle Navigation">
-                <span></span><span></span><span></span>
-            </button>
-
-            <div class="lang-toggle">
-                <button id="lang-en" class="active" aria-label="English">🇬🇧</button>
-                <button id="lang-de" aria-label="Deutsch">🇩🇪</button>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#" data-i18n="nav_home">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" aria-expanded="false" data-i18n="nav_systemic">Systemic Therapy ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" data-i18n="nav_individual">Individual Systemic Therapy</a></li>
-                        <li><a href="#" data-i18n="nav_couples">Relationship & Couples Therapy</a></li>
-                        <li><a href="#" data-i18n="nav_family">Family Therapy</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" aria-expanded="false" data-i18n="nav_constellations">Family Constellations ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="1to1-sessions.html" data-i18n="nav_const_11">1:1 Sessions</a></li>
-                        <li><a href="#" data-i18n="nav_const_workshops">Family Constellations Workshops</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" data-i18n="nav_about">About</a></li>
-                <li><a href="#" data-i18n="nav_contact">Contact</a></li>
-                <li><a href="mailto:saraposs4@gmail.com" class="btn nav-cta" data-i18n="nav_cta">Book Discovery Call</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="site-nav"></div>
+    <script src="nav.js"></script>
 
     <main id="main-content">
         <section class="hero">
@@ -387,7 +229,8 @@
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="#" class="footer-link" data-i18n="fnav_home">Home</a>
                 <a href="#" class="footer-link" data-i18n="fnav_systemic">Systemic Therapy</a>
-                <a href="#" class="footer-link" data-i18n="fnav_constellations">Family Constellations</a>
+                <a href="1to1-sessions.html" class="footer-link" data-i18n="fnav_11_sessions">1:1 Sessions</a>
+                <a href="workshops.html" class="footer-link" data-i18n="fnav_workshops">Workshops</a>
                 <a href="#" class="footer-link" data-i18n="fnav_about">About</a>
                 <a href="#" class="footer-link" data-i18n="fnav_contact">Contact</a>
                 <a href="#" class="footer-link" data-i18n="fnav_faqs">FAQs</a>
@@ -406,63 +249,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            const overlay = document.querySelector('.overlay');
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            const navLinkItems = document.querySelectorAll('.nav-links li a:not(.dropdown-toggle)');
-
-            function closeMenu() {
-                navLinks.classList.remove('active');
-                menuToggle.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.classList.remove('menu-open');
-                document.querySelectorAll('.dropdown').forEach(d => {
-                    d.classList.remove('active');
-                    d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
-                });
-            }
-
-            menuToggle.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    closeMenu();
-                } else {
-                    navLinks.classList.add('active');
-                    menuToggle.classList.add('active');
-                    overlay.classList.add('active');
-                    document.body.classList.add('menu-open');
-                }
-            });
-
-            overlay.addEventListener('click', closeMenu);
-
-            navLinkItems.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth <= 992) closeMenu();
-                });
-            });
-
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 992) {
-                        e.preventDefault();
-                        const parent = toggle.parentElement;
-                        document.querySelectorAll('.dropdown').forEach(d => {
-                            if (d !== parent) {
-                                d.classList.remove('active');
-                                d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
-                            }
-                        });
-                        const isOpen = parent.classList.toggle('active');
-                        toggle.setAttribute('aria-expanded', isOpen);
-                    }
-                });
-            });
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 992) closeMenu();
-            });
-
             /* --- Language Toggle --- */
             const translations = {
                 en: {
@@ -518,6 +304,8 @@
                     fnav_home: 'Home',
                     fnav_systemic: 'Systemic Therapy',
                     fnav_constellations: 'Family Constellations',
+                    fnav_11_sessions: '1:1 Sessions',
+                    fnav_workshops: 'Workshops',
                     fnav_about: 'About',
                     fnav_contact: 'Contact',
                     fnav_faqs: 'FAQs',
@@ -579,6 +367,8 @@
                     fnav_home: 'Startseite',
                     fnav_systemic: 'Systemische Therapie',
                     fnav_constellations: 'Familienaufstellungen',
+                    fnav_11_sessions: '1:1 Sitzungen',
+                    fnav_workshops: 'Workshops',
                     fnav_about: '\u00dcber mich',
                     fnav_contact: 'Kontakt',
                     fnav_faqs: 'H\u00e4ufige Fragen',
