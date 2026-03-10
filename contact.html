@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Sara Poss Therapy</title>
     <meta name="description" content="Get in touch with Sara Poss for systemic therapy and Family Constellations. Book a complimentary introductory call. North London and Brick Lane locations.">
-    <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
 
@@ -21,7 +21,7 @@
             display: flex;
             align-items: flex-end;
             background: linear-gradient(to top, rgba(61,53,47,0.85) 0%, rgba(61,53,47,0.3) 40%, transparent 70%),
-                url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80') center/cover no-repeat;
+                url('contact-hero.jpg') center/cover no-repeat;
         }
         .contact-hero .container {
             padding-bottom: 48px;
@@ -86,7 +86,7 @@
 <body>
 
     <div id="site-nav"></div>
-    <script src="nav.js"></script>
+    <script src="nav.js" defer></script>
 
     <main id="main-content">
         <section class="contact-hero">
