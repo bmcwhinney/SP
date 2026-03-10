@@ -17,9 +17,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" aria-expanded="false" data-i18n="nav_systemic">Systemic Therapy ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" data-i18n="nav_individual">Individual Systemic Therapy</a></li>
-                        <li><a href="#" data-i18n="nav_couples">Relationship &amp; Couples Therapy</a></li>
-                        <li><a href="#" data-i18n="nav_family">Family Therapy</a></li>
+                        <li><a href="systemic-therapy.html#individual" data-i18n="nav_individual">Individual Systemic Therapy</a></li>
+                        <li><a href="systemic-therapy.html#couples" data-i18n="nav_couples">Relationship &amp; Couples Therapy</a></li>
+                        <li><a href="systemic-therapy.html#family" data-i18n="nav_family">Family Therapy</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -116,7 +116,15 @@
                 if (href && href !== '#') {
                     e.preventDefault();
                     closeMenu();
-                    window.location.href = href;
+                    const [path, hash] = href.split('#');
+                    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+                    const samePage = hash && (!path || path === currentFile);
+                    if (hash && samePage) {
+                        const target = document.getElementById(hash);
+                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        window.location.href = href;
+                    }
                 } else {
                     closeMenu();
                 }
