@@ -26,7 +26,13 @@
                     <a href="#" class="dropdown-toggle" aria-expanded="false" data-i18n="nav_constellations">Family Constellations ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="1to1-sessions.html" data-i18n="nav_const_11">1:1 Sessions</a></li>
-                        <li><a href="workshops.html" data-i18n="nav_const_workshops">Family Constellations Workshops</a></li>
+                        <li class="has-submenu">
+                            <a href="#" class="submenu-toggle" data-i18n="nav_const_workshops">Family Constellations Workshops ▾</a>
+                            <ul class="submenu">
+                                <li><a href="workshops.html" data-i18n="nav_const_open">Open Group Workshops</a></li>
+                                <li><a href="#" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li><a href="#" data-i18n="nav_about">About</a></li>
@@ -59,6 +65,7 @@
                 const t = d.querySelector('.dropdown-toggle');
                 if (t) t.setAttribute('aria-expanded', 'false');
             });
+            document.querySelectorAll('.has-submenu').forEach(s => s.classList.remove('active'));
         }
 
         menuToggle.addEventListener('click', () => {
@@ -92,7 +99,17 @@
             });
         });
 
-        document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
+        document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggle.parentElement.classList.toggle('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.nav-links a:not(.dropdown-toggle):not(.submenu-toggle)').forEach(link => {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth > 992) return;
                 const href = link.getAttribute('href');
