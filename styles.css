@@ -93,7 +93,7 @@ footer p { margin-bottom: 20px; }
 .footer-cta { margin-bottom: 20px; }
 .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; margin-top: 40px; padding-top: 36px; border-top: 1px solid #EAEAEA; }
 .footer-link { color: var(--text-primary); font-size: 0.9rem; font-weight: 500; }
-.footer-link:hover { color: var(--teal); }
+.footer-link:hover { color: #D88C8C; }
 .footer-legal { margin-top: 24px; font-size: 0.875rem; color: #666; }
 
 /* Accreditation badges – sitewide footer */
@@ -104,7 +104,7 @@ footer p { margin-bottom: 20px; }
 /* Footer social links */
 .footer-social { display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: 24px; flex-wrap: wrap; }
 .footer-social a { color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; transition: color var(--transition-speed); }
-.footer-social a:hover { color: var(--teal); }
+.footer-social a:hover { color: #D88C8C; }
 .footer-social svg { width: 20px; height: 20px; flex-shrink: 0; }
 
 /* WhatsApp Float */
