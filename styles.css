@@ -30,7 +30,7 @@ html {
 }
 body {
     font-family: var(--font-body);
-    font-weight: 400;
+    font-weight: 500;
     color: var(--text-secondary);
     background-color: var(--bg-color);
     line-height: 1.7;
@@ -95,6 +95,11 @@ footer p { margin-bottom: 20px; }
 .footer-link:hover { color: var(--teal); }
 .footer-legal { margin-top: 24px; font-size: 0.875rem; color: #666; }
 
+/* Accreditation badges – sitewide footer */
+.accreditation-badges { display: flex; justify-content: center; align-items: center; gap: 48px; margin-top: 36px; padding-top: 36px; border-top: 1px solid #EAEAEA; flex-wrap: wrap; }
+.accreditation-badges img { height: 85px; width: auto; max-width: 320px; object-fit: contain; opacity: 1; transition: opacity var(--transition-speed); }
+.accreditation-badges img:hover { opacity: 0.9; }
+
 /* WhatsApp Float */
 .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); }
 .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
@@ -122,6 +127,8 @@ footer p { margin-bottom: 20px; }
     .whatsapp-float .tooltip { display: none; }
     .footer-link { font-size: 0.9375rem; }
     .footer-legal { font-size: 0.875rem; }
+    .accreditation-badges { gap: 28px; }
+    .accreditation-badges img { height: 70px; max-width: 260px; }
 }
 
 /* Very small screens – ensure readable minimum font sizes */
