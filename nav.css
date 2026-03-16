@@ -20,7 +20,7 @@ nav { display: flex; align-items: center; padding: 20px 24px; max-width: 1200px;
 .dropdown-menu li { border-bottom: 1px solid #F0F0F0; }
 .dropdown-menu li:last-child { border-bottom: none; }
 .dropdown-menu li a { display: block; padding: 14px 20px; font-size: 0.9rem; font-weight: 400; }
-.dropdown-menu li a:hover { background-color: var(--bg-color); color: var(--accent-color); padding-left: 25px; }
+.dropdown-menu li a:hover { background-color: #F5F5F5; color: var(--accent-color); padding-left: 25px; }
 
 /* Nested submenu (desktop) */
 .has-submenu { position: relative; }
@@ -29,7 +29,7 @@ nav { display: flex; align-items: center; padding: 20px 24px; max-width: 1200px;
 .submenu li { border-bottom: 1px solid #F0F0F0; }
 .submenu li:last-child { border-bottom: none; }
 .submenu li a { display: block; padding: 14px 20px; font-size: 0.9rem; font-weight: 400; }
-.submenu li a:hover { background-color: var(--bg-color); color: var(--accent-color); padding-left: 25px; }
+.submenu li a:hover { background-color: #F5F5F5; color: var(--accent-color); padding-left: 25px; }
 .submenu-toggle { cursor: pointer; }
 
 /* Hamburger (hidden on desktop) */
@@ -75,7 +75,7 @@ body.menu-open { overflow: hidden; }
         position: static; box-shadow: none; border-top: none;
         opacity: 1; visibility: visible; transform: none;
         display: none;
-        background-color: var(--bg-color); border-radius: 0; margin-top: 10px;
+        background-color: #F8F8F8; border-radius: 0; margin-top: 10px;
     }
     .dropdown.active .dropdown-menu { display: block; }
     .dropdown-menu li a { font-size: 1rem; padding: 12px 20px; border-bottom: none; }
