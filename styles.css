@@ -41,7 +41,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* Buttons */
 .btn {
     display: inline-block;
-    background-color: var(--accent-color);
+    background-color: #D88C8C;
     color: var(--white);
     padding: 14px 32px;
     border-radius: 8px;
@@ -50,10 +50,10 @@ img { max-width: 100%; height: auto; display: block; }
     text-align: center;
     margin-top: 1rem;
     cursor: pointer;
-    border: 2px solid var(--accent-color);
+    border: 2px solid #D88C8C;
     font-size: 0.95rem;
 }
-.btn:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); color: var(--white); }
+.btn:hover { background-color: #C77B7B; border-color: #C77B7B; color: var(--white); }
 .btn-outline { background: transparent; color: var(--birds-egg); border-color: var(--birds-egg); }
 .btn-outline:hover { background-color: var(--birds-egg); color: var(--white); border-color: var(--birds-egg); }
 .btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
