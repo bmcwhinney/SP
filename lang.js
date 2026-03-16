@@ -105,6 +105,11 @@
             fc_after_p2: 'Family Constellations Therapy differs from ongoing weekly therapy. Sessions may stand alone, or be revisited when it feels supportive. If you choose to book another session, I recommend allowing at least 2–3 weeks between sessions to support integration.',
             fc_after_p3: 'Many people also find it helpful to integrate this work alongside other supportive approaches such as psychotherapy, somatic therapy, or body-based practices.',
             constellations_disclaimer: 'Constellations are a process for expanding understanding and awareness. They are not a diagnostic or treatment method for any psychological condition or disorder.',
+            fc_reading_title: 'Further reading',
+            fc_reading_welldoing: 'What is Family Constellations Therapy?',
+            fc_reading_welldoing_src: '(Welldoing)',
+            fc_reading_csc: 'Parenting Constellations with Sara Poss & Betsy Gibson',
+            fc_reading_csc_src: '(The CSC)',
             /* workshops */
             w_understand_title: 'Understand challenges and transform them',
             w_understand_p: 'Family Constellations workshops offer a unique way to uncover the hidden roots of personal and professional challenges. Many people come feeling stuck, constrained, or unsure why certain patterns keep repeating. This method helps you move beyond the surface problem to explore its deeper origins, often connected to previous generations.',
@@ -277,6 +282,11 @@
             fc_after_p2: 'Familienaufstellungs-Therapie unterscheidet sich von wöchentlicher Langzeittherapie. Sitzungen können für sich stehen oder wiederholt werden, wenn es unterstützend wirkt. Wenn Sie eine weitere Sitzung buchen möchten, empfehle ich mindestens 2–3 Wochen Abstand zur Integration.',
             fc_after_p3: 'Viele Menschen finden es auch hilfreich, diese Arbeit neben anderen unterstützenden Ansätzen wie Psychotherapie, somatischer Therapie oder körperorientierten Praktiken zu integrieren.',
             constellations_disclaimer: 'Constellations sind ein Prozess zur Erweiterung von Verständnis und Bewusstsein. Sie sind keine diagnostische oder Behandlungsmethode für psychologische Zustände oder Störungen.',
+            fc_reading_title: 'Weiterführende Lektüre',
+            fc_reading_welldoing: 'Was ist Familienaufstellungs-Therapie?',
+            fc_reading_welldoing_src: '(Welldoing)',
+            fc_reading_csc: 'Parenting Constellations mit Sara Poss & Betsy Gibson',
+            fc_reading_csc_src: '(The CSC)',
             /* workshops */
             w_understand_title: 'Herausforderungen verstehen und transformieren',
             w_understand_p: 'Familienaufstellungs-Workshops bieten eine einzigartige Möglichkeit, die verborgenen Wurzeln persönlicher und beruflicher Herausforderungen aufzudecken. Viele kommen mit dem Gefühl, festzustecken, eingeschränkt zu sein oder unsicher, warum bestimmte Muster sich wiederholen. Diese Methode hilft Ihnen, über das Oberflächenproblem hinauszugehen und seine tieferen Ursprünge zu erkunden, oft verbunden mit früheren Generationen.',
