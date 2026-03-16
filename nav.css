@@ -10,7 +10,7 @@ nav { display: flex; align-items: center; padding: 20px 24px; max-width: 1200px;
 
 /* Desktop Nav */
 .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
-.nav-links li a { font-weight: 500; font-size: 0.9rem; }
+.nav-links li a { font-weight: 600; font-size: 0.95rem; }
 .nav-links li a:not(.btn):hover { color: var(--accent-color); }
 
 /* Dropdowns */

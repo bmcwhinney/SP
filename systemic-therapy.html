@@ -37,7 +37,8 @@
         .option-card a { font-size: 0.9rem; font-weight: 500; color: var(--accent-color); }
         .option-card a:hover { text-decoration: underline; }
 
-        .fees-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .fees-table { width: 100%; min-width: 500px; border-collapse: collapse; margin: 1.5rem 0; }
+        .fees-wrapper { overflow-x: auto; }
         .fees-table th, .fees-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #E6EDF0; }
         .fees-table th { font-family: var(--font-body); font-weight: 600; color: var(--text-primary); }
         .fees-table tr:last-child td { border-bottom: none; }
@@ -168,32 +169,42 @@
             <div class="container">
                 <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="18" text-anchor="middle" font-size="22" font-weight="600" fill="currentColor" font-family="system-ui, sans-serif">£</text></svg>
                 <h2 data-i18n="st_fees_title">Fees</h2>
+                <div class="fees-wrapper">
                 <table class="fees-table">
                     <thead>
                         <tr>
                             <th data-i18n="st_fees_th_therapy">Therapy</th>
                             <th data-i18n="st_fees_th_online">Online (60 min)</th>
+                            <th data-i18n="st_fees_th_online_90">Online (90 min)</th>
                             <th data-i18n="st_fees_th_inperson">In-person (60 min)</th>
+                            <th data-i18n="st_fees_th_inperson_90">In-person (90 min)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td data-i18n="nav_individual">Individual Systemic Therapy</td>
                             <td>&pound;80</td>
+                            <td>—</td>
                             <td>&pound;100</td>
+                            <td>—</td>
                         </tr>
                         <tr>
                             <td data-i18n="st_couples_title">Couples Therapy</td>
                             <td>&pound;120</td>
+                            <td>&pound;180</td>
                             <td>&pound;140</td>
+                            <td>&pound;210</td>
                         </tr>
                         <tr>
                             <td data-i18n="st_family_title">Family Therapy</td>
                             <td>&pound;150</td>
+                            <td>&pound;220</td>
                             <td>&pound;170</td>
+                            <td>&pound;250</td>
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </section>
     </main>
