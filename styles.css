@@ -84,6 +84,7 @@ img { max-width: 100%; height: auto; display: block; }
 .content-section p { margin-bottom: 1rem; font-size: 1rem; }
 .content-section p:last-child { margin-bottom: 0; }
 .content-section .highlight { background: #E6EDF0; padding: 24px; border-radius: 8px; border-left: 3px solid var(--accent-color); margin: 1.5rem 0; }
+.constellations-disclaimer { font-size: 0.875rem; color: #666; font-style: italic; padding: 24px 0; margin-top: 0; border-top: 1px solid #E6EDF0; }
 
 /* Footer */
 footer { background-color: var(--white); padding: 60px 24px; text-align: center; border-top: 3px solid var(--taupe); }
