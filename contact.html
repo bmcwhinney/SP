@@ -71,9 +71,14 @@
         .contact-card a { color: var(--accent-color); font-weight: 500; }
         .contact-card a:hover { text-decoration: underline; }
 
+        .accreditation-badges { display: flex; justify-content: center; align-items: center; gap: 48px; margin-top: 36px; padding-top: 36px; border-top: 1px solid #EAEAEA; flex-wrap: wrap; }
+        .accreditation-badges img { height: 85px; width: auto; max-width: 320px; object-fit: contain; opacity: 1; }
+
         @media (max-width: 768px) {
             .contact-hero { min-height: 35vh; }
             .contact-hero h1 { font-size: 1.75rem; }
+            .accreditation-badges { gap: 28px; }
+            .accreditation-badges img { height: 70px; max-width: 260px; }
         }
     </style>
 </head>
@@ -118,6 +123,12 @@
             <h3 data-i18n="footer_heading">Ready to take the next step?</h3>
             <p data-i18n="footer_text">Reach out to discuss how we can work together.</p>
             <a href="mailto:saraposs4@gmail.com" class="btn footer-cta" data-i18n="footer_cta">Book a Free Discovery Call</a>
+
+            <div class="accreditation-badges">
+                <img src="UKCP.png" alt="UKCP - UK Council for Psychotherapy, Professional Standards Authority Accredited Register" loading="lazy" decoding="async" width="500" height="143">
+                <img src="DGSF.png" alt="DGSF - Deutsche Gesellschaft für Systemische Therapie, Beratung und Familientherapie" loading="lazy" decoding="async" width="834" height="246">
+            </div>
+
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="/" class="footer-link" data-i18n="fnav_home">Home</a>
                 <a href="/systemic-therapy" class="footer-link" data-i18n="fnav_systemic">Systemic Therapy</a>
