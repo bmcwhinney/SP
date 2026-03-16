@@ -63,6 +63,11 @@
             fnav_faqs: 'FAQs',
             footer_legal: '© 2026 Sara Poss Therapy. All rights reserved.',
             wa_tooltip: 'Message Sara on WhatsApp',
+            events_tooltip: 'Upcoming Events',
+            events_title: 'Family & Personal Issue Workshop',
+            events_date: '7th May 2026',
+            events_time: '6pm - 9pm',
+            events_btn: 'Book tickets',
             page_contact_title: 'Contact',
             page_contact_tagline: 'Begin your journey',
             contact_intro: 'Join me for a complimentary introductory call where we can explore your needs and address any questions you may have.',
@@ -240,6 +245,11 @@
             fnav_faqs: 'Häufige Fragen',
             footer_legal: '© 2026 Sara Poss Therapy. Alle Rechte vorbehalten.',
             wa_tooltip: 'Sara auf WhatsApp schreiben',
+            events_tooltip: 'Kommende Veranstaltungen',
+            events_title: 'Workshop zu Familien- und persönlichen Themen',
+            events_date: '7. Mai 2026',
+            events_time: '18–21 Uhr',
+            events_btn: 'Tickets buchen',
             page_contact_title: 'Kontakt',
             page_contact_tagline: 'Beginnen Sie Ihre Reise',
             contact_intro: 'Vereinbaren Sie ein kostenloses Erstgespräch, in dem wir Ihre Anliegen besprechen und offene Fragen klären können.',
@@ -394,6 +404,9 @@
         if (waLink) waLink.href = waMessages[lang];
         localStorage.setItem('sp-lang', lang);
     }
+    window.spApplyTranslations = function () {
+        setLanguage(localStorage.getItem('sp-lang') || 'en');
+    };
 
     var langInitialized = false;
     function initLang() {
