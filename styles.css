@@ -117,6 +117,22 @@ footer p { margin-bottom: 20px; }
 @keyframes wa-pulse { 0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.18); } 50% { box-shadow: 0 4px 16px rgba(37,211,102,0.5); } }
 .whatsapp-float.pulse { animation: wa-pulse 2s ease 3; }
 
+/* Events Float – symmetrical with WhatsApp */
+.events-float { position: fixed; bottom: 28px; left: 28px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: #5B8390; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); cursor: pointer; border: none; }
+.events-float:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
+.events-float .events-icon { display: flex; align-items: center; justify-content: center; color: var(--white); }
+.events-float .events-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; }
+.events-float .events-tooltip { position: absolute; left: 68px; top: 50%; transform: translateY(-50%); background: #151d35; color: var(--white); font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all var(--transition-speed); pointer-events: none; }
+.events-float .events-tooltip::after { content: ''; position: absolute; left: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-left: none; border-right-color: #151d35; }
+.events-float:hover .events-tooltip { opacity: 1; visibility: visible; }
+.events-float.expanded .events-tooltip { opacity: 0; visibility: hidden; }
+.events-float .events-panel { position: absolute; left: 68px; bottom: 0; width: 280px; background: var(--white); border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); padding: 20px; opacity: 0; visibility: hidden; transform: translateX(-10px); transition: all var(--transition-speed); pointer-events: none; text-align: left; }
+.events-float.expanded .events-panel { opacity: 1; visibility: visible; transform: translateX(0); pointer-events: auto; }
+.events-float .events-panel::before { content: ''; position: absolute; left: -6px; bottom: 20px; border: 6px solid transparent; border-right-color: var(--white); border-left: none; }
+.events-float .events-panel h3 { font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); margin-bottom: 12px; font-weight: 400; }
+.events-float .events-panel .event-detail { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 4px; }
+.events-float .events-panel .btn { margin-top: 16px; margin-bottom: 0; display: block; text-align: center; font-size: 0.9rem; padding: 10px 20px; }
+
 /* =========================================
    SHARED RESPONSIVE
    ========================================= */
@@ -132,6 +148,10 @@ footer p { margin-bottom: 20px; }
     .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
     .whatsapp-float svg { width: 24px; height: 24px; }
     .whatsapp-float .tooltip { display: none; }
+    .events-float { bottom: 20px; left: 20px; width: 50px; height: 50px; }
+    .events-float .events-icon svg { width: 22px; height: 22px; }
+    .events-float .events-panel { left: 58px; width: 260px; padding: 16px; }
+    .events-float .events-tooltip { display: none; }
     .footer-link { font-size: 0.9375rem; }
     .footer-legal { font-size: 0.875rem; }
     .accreditation-badges { gap: 28px; }
