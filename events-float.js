@@ -1,5 +1,10 @@
 (function () {
   'use strict';
+  function init() {
+    if (!document.body) {
+      document.addEventListener('DOMContentLoaded', init);
+      return;
+    }
   var btn = document.createElement('button');
   btn.className = 'events-float';
   btn.setAttribute('aria-label', 'Upcoming Events');
@@ -29,4 +34,6 @@
     btn.setAttribute('aria-expanded', 'false');
     btn.querySelector('.events-panel').setAttribute('aria-hidden', 'true');
   });
+  }
+  init();
 })();
