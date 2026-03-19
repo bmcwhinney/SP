@@ -130,6 +130,7 @@
             w_role_rep: 'Representative (Resource)',
             w_role_rep_p: 'Stand in for someone or something in a Constellation. No prior experience is needed. Representatives often gain surprising personal insights and healing.',
             w_participants_outro: 'Both ways of participating can lead to profound understanding and emotional release.',
+            w_upcoming_workshop: 'Upcoming workshop',
             /* bespoke */
             b_theme_title: 'Exploring a Theme, Question, or Issue Together',
             b_theme_p1: 'Bespoke Systemic and Family Constellations workshops support the exploration of meaningful personal or professional questions and challenges.',
@@ -332,6 +333,7 @@
             w_role_rep: 'Stellvertreter:in (Ressource)',
             w_role_rep_p: 'Stehen Sie für jemanden oder etwas in einer Aufstellung ein. Keine Vorerfahrung nötig. Stellvertreter:innen gewinnen oft überraschende persönliche Einsichten und Heilung.',
             w_participants_outro: 'Beide Teilnahmeformen können zu tiefem Verständnis und emotionaler Befreiung führen.',
+            w_upcoming_workshop: 'Kommender Workshop',
             /* bespoke */
             b_theme_title: 'Ein Thema, eine Frage oder ein Anliegen gemeinsam erkunden',
             b_theme_p1: 'Maßgeschneiderte Systemische und Familienaufstellungs-Workshops unterstützen die Erkundung bedeutsamer persönlicher oder beruflicher Fragen und Herausforderungen.',
