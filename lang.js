@@ -63,6 +63,7 @@
             fnav_faqs: 'FAQs',
             footer_legal: '© 2026 Sara Poss Therapy. All rights reserved.',
             wa_tooltip: 'Message Sara on WhatsApp',
+            nav_toggle: 'Toggle navigation menu',
             events_tooltip: 'Upcoming Events',
             events_title: 'Family & Personal Issue Workshop',
             events_date: '7th May 2026',
@@ -74,6 +75,7 @@
             contact_phone_label: 'Phone',
             contact_location_heading: 'North London Therapy',
             contact_location_address: 'Mc Crone House<br>Leighton Road<br>London NW5',
+            contact_location_img_alt: 'North London therapy location - McCrone House',
             page_11_title: '1:1 Family Constellations Sessions',
             page_11_tagline: 'One-to-one sessions in North London or online via Zoom',
             page_workshops_title: 'Family Constellations Workshops',
@@ -266,6 +268,7 @@
             fnav_faqs: 'Häufige Fragen',
             footer_legal: '© 2026 Sara Poss Therapy. Alle Rechte vorbehalten.',
             wa_tooltip: 'Sara auf WhatsApp schreiben',
+            nav_toggle: 'Navigationsmenü ein-/ausblenden',
             events_tooltip: 'Kommende Veranstaltungen',
             events_title: 'Workshop zu Familien- und persönlichen Themen',
             events_date: '7. Mai 2026',
@@ -277,6 +280,7 @@
             contact_phone_label: 'Telefon',
             contact_location_heading: 'Nord-London Therapie',
             contact_location_address: 'Mc Crone House<br>Leighton Road<br>London NW5',
+            contact_location_img_alt: 'Nord-London Therapie - McCrone House',
             page_11_title: '1:1 Familienaufstellungen',
             page_11_tagline: 'Einzelsitzungen in Nord-London oder online via Zoom',
             page_workshops_title: 'Familienaufstellungs-Workshops',
@@ -424,11 +428,21 @@
     }
 
     function setLanguage(lang) {
+        const t = translations[lang];
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            const t = translations[lang];
             const val = t[key];
             if (val && typeof val === 'string') el.innerHTML = val;
+        });
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+            const key = el.getAttribute('data-i18n-aria');
+            const val = t[key];
+            if (val && typeof val === 'string') el.setAttribute('aria-label', val);
+        });
+        document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+            const key = el.getAttribute('data-i18n-alt');
+            const val = t[key];
+            if (val && typeof val === 'string') el.setAttribute('alt', val);
         });
         document.documentElement.lang = lang;
         const pageKey = getPageKey();
@@ -443,7 +457,16 @@
         if (langEn) langEn.classList.toggle('active', lang === 'en');
         if (langDe) langDe.classList.toggle('active', lang === 'de');
         const waLink = document.getElementById('wa-link');
-        if (waLink) waLink.href = waMessages[lang];
+        if (waLink) {
+            waLink.href = waMessages[lang];
+            const waLabel = t.wa_tooltip;
+            if (waLabel) waLink.setAttribute('aria-label', waLabel);
+        }
+        const eventsBtn = document.querySelector('.events-float');
+        if (eventsBtn) {
+            const eventsLabel = t.events_tooltip;
+            if (eventsLabel) eventsBtn.setAttribute('aria-label', eventsLabel);
+        }
         localStorage.setItem('sp-lang', lang);
     }
     window.spApplyTranslations = function () {

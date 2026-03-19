@@ -107,7 +107,7 @@ footer p { margin-bottom: 20px; }
 
 /* Accreditation badges – sitewide footer */
 .accreditation-badges { display: flex; justify-content: center; align-items: center; gap: 48px; margin-top: 36px; padding-top: 36px; border-top: 1px solid #EAEAEA; flex-wrap: wrap; }
-.accreditation-badges img { height: 85px; width: auto; max-width: 320px; object-fit: contain; opacity: 1; transition: opacity var(--transition-speed); }
+.accreditation-badges img { height: 60px; width: auto; max-width: 200px; object-fit: contain; opacity: 1; transition: opacity var(--transition-speed); }
 .accreditation-badges img:hover { opacity: 0.9; }
 
 /* Footer social links */
@@ -117,7 +117,7 @@ footer p { margin-bottom: 20px; }
 .footer-social svg { width: 20px; height: 20px; flex-shrink: 0; }
 
 /* WhatsApp Float */
-.whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); transform: translateZ(0); backface-visibility: hidden; }
+.whatsapp-float { position: fixed; bottom: max(28px, env(safe-area-inset-bottom)); right: max(28px, env(safe-area-inset-right)); z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); transform: translateZ(0); backface-visibility: hidden; }
 .whatsapp-float:hover { transform: translateZ(0) scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
 .whatsapp-float svg { width: 28px; height: 28px; fill: var(--white); }
 .whatsapp-float .tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: var(--text-primary); color: var(--white); font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all var(--transition-speed); pointer-events: none; }
@@ -127,7 +127,7 @@ footer p { margin-bottom: 20px; }
 .whatsapp-float.pulse { animation: wa-pulse 2s ease 3; }
 
 /* Events Float – symmetrical with WhatsApp */
-.events-float { position: fixed; bottom: 28px; left: 28px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: #5B8390; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); cursor: pointer; border: none; transform: translateZ(0); backface-visibility: hidden; }
+.events-float { position: fixed; bottom: max(28px, env(safe-area-inset-bottom)); left: max(28px, env(safe-area-inset-left)); z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: #5B8390; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); cursor: pointer; border: none; transform: translateZ(0); backface-visibility: hidden; }
 .events-float:hover { transform: translateZ(0) scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
 .events-float .events-icon { display: flex; align-items: center; justify-content: center; color: var(--white); }
 .events-float .events-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; }
@@ -154,17 +154,17 @@ footer p { margin-bottom: 20px; }
     footer { padding: 50px 20px; }
     .footer-cta { width: 100%; }
     .footer-nav { gap: 10px 24px; }
-    .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+    .whatsapp-float { bottom: max(20px, env(safe-area-inset-bottom)); right: max(20px, env(safe-area-inset-right)); width: 50px; height: 50px; }
     .whatsapp-float svg { width: 24px; height: 24px; }
     .whatsapp-float .tooltip { display: none; }
-    .events-float { bottom: 20px; left: 20px; width: 50px; height: 50px; }
+    .events-float { bottom: max(20px, env(safe-area-inset-bottom)); left: max(20px, env(safe-area-inset-left)); width: 50px; height: 50px; }
     .events-float .events-icon svg { width: 22px; height: 22px; }
     .events-float .events-panel { left: 58px; width: 260px; padding: 16px; }
     .events-float .events-tooltip { display: none; }
     .footer-link { font-size: 0.9375rem; }
     .footer-legal { font-size: 0.875rem; }
-    .accreditation-badges { gap: 28px; }
-    .accreditation-badges img { height: 70px; max-width: 260px; }
+    .accreditation-badges { gap: 24px; }
+    .accreditation-badges img { height: 50px; max-width: 160px; }
 }
 
 /* Very small screens – ensure readable minimum font sizes */
@@ -172,4 +172,5 @@ footer p { margin-bottom: 20px; }
     html { font-size: 16px; }
     .trust-banner { font-size: 0.875rem; }
     .footer-link { font-size: 0.9375rem; }
+    .events-float .events-panel { width: min(260px, calc(100vw - 76px)); left: 58px; }
 }
