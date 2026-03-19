@@ -120,8 +120,8 @@ footer p { margin-bottom: 20px; }
 .whatsapp-float { position: fixed; bottom: max(28px, env(safe-area-inset-bottom)); right: max(28px, env(safe-area-inset-right)); z-index: 998; width: 56px; height: 56px; border-radius: 50%; background-color: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: transform var(--transition-speed), box-shadow var(--transition-speed); transform: translateZ(0); backface-visibility: hidden; }
 .whatsapp-float:hover { transform: translateZ(0) scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
 .whatsapp-float svg { width: 28px; height: 28px; fill: var(--white); }
-.whatsapp-float .tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: var(--text-primary); color: var(--white); font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all var(--transition-speed); pointer-events: none; }
-.whatsapp-float .tooltip::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right: none; border-left-color: var(--text-primary); }
+.whatsapp-float .tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: #151d35; color: var(--white); font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all var(--transition-speed); pointer-events: none; }
+.whatsapp-float .tooltip::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right: none; border-left-color: #151d35; }
 .whatsapp-float:hover .tooltip { opacity: 1; visibility: visible; }
 @keyframes wa-pulse { 0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.18); } 50% { box-shadow: 0 4px 16px rgba(37,211,102,0.5); } }
 .whatsapp-float.pulse { animation: wa-pulse 2s ease 3; }
