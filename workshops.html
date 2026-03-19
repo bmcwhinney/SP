@@ -35,7 +35,10 @@
         .role-card { background: #E6EDF0; padding: 28px; border-radius: 8px; border-left: 3px solid var(--accent-color); }
         .role-card h3 { font-size: 1.1rem; font-family: var(--font-body); font-weight: 600; margin-bottom: 10px; }
         .role-card p { font-size: 0.95rem; margin: 0; }
-        .workshop-booking-link { font-weight: 600; margin-top: 0.5rem; display: inline-block; }
+        .workshop-booking-callout { background: #E6EDF0; border-left: 4px solid var(--accent-color); border-radius: 8px; padding: 20px 24px; margin-top: 1.5rem; }
+        .workshop-booking-intro { font-weight: 600; font-size: 1rem; margin: 0 0 6px 0; }
+        .workshop-booking-detail { font-size: 0.95rem; margin: 0 0 14px 0; color: var(--text-color); }
+        .workshop-booking-btn { display: inline-block; }
 
         .testimonials-strip { background-color: #263056; color: var(--white); padding: 60px 24px; text-align: center; }
         .testimonials-strip h2 { color: var(--white); font-size: 1.75rem; border-bottom: none; padding-bottom: 0; }
@@ -102,7 +105,11 @@
                     </div>
                 </div>
                 <p data-i18n="w_participants_outro">Both ways of participating can lead to profound understanding and emotional release.</p>
-                <p><a href="https://www.tickettailor.com/events/sarapossconstellations/2109470" target="_blank" rel="noopener noreferrer" class="workshop-booking-link" data-i18n="w_upcoming_workshop">Upcoming workshop</a></p>
+                <div class="workshop-booking-callout">
+                    <p class="workshop-booking-intro" data-i18n="w_upcoming_workshop_intro">Next workshop — Book your place</p>
+                    <p class="workshop-booking-detail"><span data-i18n="events_title">Family & Personal Issue Workshop</span> · <span data-i18n="events_date">7th May 2026</span>, <span data-i18n="events_time">6pm - 9pm</span></p>
+                    <a href="https://www.tickettailor.com/events/sarapossconstellations/2109470" target="_blank" rel="noopener noreferrer" class="btn workshop-booking-btn" data-i18n="events_btn">Book tickets</a>
+                </div>
             </div>
         </section>
 
