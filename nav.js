@@ -31,6 +31,7 @@
                             <ul class="submenu">
                                 <li><a href="/workshops" data-i18n="nav_const_open">Open Group Workshops</a></li>
                                 <li><a href="/bespoke-workshops" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
+                                <li><a href="/media-constellations" data-i18n="nav_mc">Media Constellations</a></li>
                             </ul>
                         </li>
                     </ul>
