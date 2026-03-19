@@ -15,7 +15,7 @@
     '<h3 id="events-title" data-i18n="events_title">Family & Personal Issue Workshop</h3>' +
     '<p class="event-detail" data-i18n="events_date">7th May 2026</p>' +
     '<p class="event-detail" data-i18n="events_time">6pm - 9pm</p>' +
-    '<a href="https://www.tickettailor.com/events/sarapossconstellations/2109470" class="btn" target="_blank" rel="noopener" data-i18n="events_btn">Book tickets</a>' +
+    '<a href="https://www.tickettailor.com/events/sarapossconstellations/2109470" class="btn" target="_blank" rel="noopener noreferrer" data-i18n="events_btn">Book tickets</a>' +
     '</div>';
   document.body.appendChild(btn);
   if (typeof window.spApplyTranslations === 'function') window.spApplyTranslations();
