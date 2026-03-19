@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Methodist Circuit | Full Spring Preaching Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --methodist-red: #C8102E;   
+            --red-dark: #9e0c24;        
+            --charcoal: #2d3748;        
+            --bg-color: #f4f6f8;        
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --muted-text: #718096;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--charcoal);
+            margin: 0;
+            padding: 3rem 1.5rem;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 95vw;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-top: 8px solid var(--methodist-red);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--methodist-red) 0%, var(--red-dark) 100%);
+            color: white;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffe6e6;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .directory {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 1.5rem 2rem;
+            background-color: #fafbfc;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .minister-badge {
+            background: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            font-weight: 600;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+
+        .minister-badge:hover {
+            border-color: var(--methodist-red);
+            color: var(--methodist-red);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(200, 16, 46, 0.15);
+        }
+
+        /* --- RESPONSIVE SCROLLING UPGRADES --- */
+        .scroll-hint {
+            display: none;
+            background: #fff0f2;
+            color: var(--red-dark);
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+
+        @media (max-width: 1200px) {
+            .scroll-hint {
+                display: block;
+                animation: pulse 2s infinite;
+            }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            padding: 0;
+            -webkit-overflow-scrolling: touch; 
+        }
+
+        .table-wrapper::-webkit-scrollbar {
+            height: 14px;
+        }
+        .table-wrapper::-webkit-scrollbar-track {
+            background: #f4f6f8; 
+        }
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1; 
+            border-radius: 10px;
+            border: 3px solid #f4f6f8;
+        }
+        .table-wrapper::-webkit-scrollbar-thumb:hover {
+            background-color: #94a3b8; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: center;
+            white-space: nowrap; 
+            border-bottom: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        th:last-child, td:last-child {
+            border-right: none;
+        }
+
+        th {
+            background-color: #fafbfc;
+            color: var(--charcoal);
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            border-bottom: 2px solid var(--methodist-red);
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+        
+        .sub-header {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: var(--muted-text);
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .church-col {
+            background-color: #ffffff;
+            color: var(--methodist-red);
+            font-weight: 700;
+            text-align: left;
+            font-size: 1.05rem;
+            position: sticky;
+            left: 0;
+            z-index: 10;
+            box-shadow: 4px 0 8px rgba(0,0,0,0.03);
+            min-width: 160px;
+        }
+
+        tbody tr:hover {
+            background-color: #fff9f9;
+        }
+
+        tbody tr:hover .church-col {
+            background-color: #fff4f4;
+        }
+
+        .service-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .service-time {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            font-weight: 500;
+        }
+
+        .service-extra {
+            font-size: 0.75rem;
+            color: var(--methodist-red);
+            font-weight: 600;
+            margin-top: 2px;
+            background: #fff0f2;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .badge-minister {
+            background-color: #fff0f2;
+            color: var(--methodist-red);
+            border: 1px solid #ffd6dc;
+        }
+
+        .badge-local {
+            background-color: #f1f5f9;
+            color: var(--charcoal);
+            border: 1px solid #e2e8f0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #fafbfc;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            line-height: 1.6;
+        }
+
+        .footer-abbreviations {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 15px auto 0;
+        }
+
+        .footer strong {
+            color: var(--methodist-red);
+        }
+
+        /* --- PRINT STYLES --- */
+        @media print {
+            body { 
+                padding: 0; 
+                background: white; 
+                -webkit-print-color-adjust: exact; 
+                color-adjust: exact;
+            }
+            .container { 
+                max-width: 100%; 
+                box-shadow: none; 
+                border-top: none;
+                border-radius: 0;
+            }
+            .table-wrapper { 
+                overflow: visible !important; 
+            }
+            .scroll-hint, .directory { 
+                display: none !important; 
+            }
+            th, td { 
+                padding: 6px; 
+                font-size: 0.7rem; 
+                white-space: normal; 
+            }
+            .church-col {
+                min-width: auto;
+                box-shadow: none;
+                position: static;
+            }
+            @page {
+                size: landscape; 
+                margin: 1cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Forest Methodist Circuit</h1>
+        <p>Spring Preaching Plan</p>
+    </div>
+
+    <div class="directory">
+        <span class="minister-badge">Rev. Mike Long (Supt)</span>
+        <span class="minister-badge">Rev. Sue Creighton</span>
+        <span class="minister-badge">Rev. Stephanie Njeru</span>
+        <span class="minister-badge">Rev. Kong Ching Hii</span>
+        <span class="minister-badge">Rev. Armstrong Fummey</span>
+    </div>
+
+    <div class="scroll-hint">👉 Swipe or scroll right to view all upcoming dates</div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th class="church-col">Churches</th>
+                    <th>Mar 1<span class="sub-header">2 in Lent</span></th>
+                    <th>Mar 8<span class="sub-header">3 in Lent</span></th>
+                    <th>Mar 15<span class="sub-header">4 in Lent</span></th>
+                    <th>Mar 22<span class="sub-header">5 in Lent</span></th>
+                    <th>Mar 29<span class="sub-header">6 in Lent</span></th>
+                    <th>Apr 5<span class="sub-header">Easter</span></th>
+                    <th>Apr 12<span class="sub-header">2 of Easter</span></th>
+                    <th>Apr 19<span class="sub-header">3 of Easter</span></th>
+                    <th>Apr 26<span class="sub-header">4 of Easter</span></th>
+                    <th>May 3<span class="sub-header">5 of Easter</span></th>
+                    <th>May 10<span class="sub-header">6 of Easter</span></th>
+                    <th>May 17<span class="sub-header">7 of Easter</span></th>
+                    <th>May 24<span class="sub-header">Pentecost</span></th>
+                    <th>May 31<span class="sub-header">Trinity</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="church-col">Cann Hall<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">9:00 AM</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                    <td><span class="badge badge-minister">LONG HC</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">LONG HC</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                    <td><span class="badge badge-minister">LONG HC</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">Leyton Trinity<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">11:00 AM</span></td>
+                    <td><span class="badge badge-minister">NJERU A</span></td>
+                    <td><span class="badge badge-minister">BONDS</span></td>
+                    <td><span class="badge badge-minister">NJERU HC</span></td>
+                    <td><span class="badge badge-local">WL</span></td>
+                    <td><span class="badge badge-minister">LECKEY</span></td>
+                    <td><span class="badge badge-minister">NJERU HC</span></td>
+                    <td><span class="badge badge-minister">M HALL</span></td>
+                    <td><span class="badge badge-minister">NJERU HC</span></td>
+                    <td><span class="badge badge-minister">FUMMEY</span></td>
+                    <td><span class="badge badge-minister">ACQUAH A</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-minister">NJERU HC GCM</span></td>
+                    <td><span class="badge badge-local">WL</span></td>
+                    <td><span class="badge badge-minister">BONDS</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">Leytonstone<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">11:00 AM</span></td>
+                    <td><span class="badge badge-minister">CORLETT CA</span></td>
+                    <td><span class="badge badge-minister">LONG HC</span></td>
+                    <td><span class="badge badge-minister">WHITE</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                    <td><span class="badge badge-minister">LONG HC</span></td>
+                    <td><span class="badge badge-minister">BONDS</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">M HALL</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                    <td><span class="badge badge-minister">LONG HC</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">Lighthouse<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">11:00 AM</span></td>
+                    <td><span class="badge badge-minister">DAWE</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-local">WL</span></td>
+                    <td><span class="badge badge-minister">NJERU HC</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-minister">ACQUAH</span></td>
+                    <td><span class="badge badge-minister">NJERU HC</span></td>
+                    <td><span class="badge badge-minister">H HALL</span></td>
+                    <td><span class="badge badge-minister">BONDS</span></td>
+                    <td><span class="badge badge-minister">NJERU HC GCM</span></td>
+                    <td><span class="badge badge-local">WL</span></td>
+                    <td><span class="badge badge-minister">WHITE</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">Loughton<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">10:30 AM</span></td>
+                    <td><span class="badge badge-minister">CREIGHTON HC</span></td>
+                    <td><div class="service-group"><span class="badge badge-minister">CREIGHTON HC</span><span class="badge badge-minister">H HALL</span></div></td>
+                    <td><div class="service-group"><span class="badge badge-minister">MILLER</span><span class="service-extra">6pm: LA</span></div></td>
+                    <td><div class="service-group"><span class="badge badge-minister">CREIGHTON</span><span class="service-extra">4pm: CREIGHTON Messy</span></div></td>
+                    <td><span class="badge badge-minister">M HALL</span></td>
+                    <td><div class="service-group"><span class="badge badge-minister">CREIGHTON HC</span><span class="badge badge-minister">CREIGHTON A</span></div></td>
+                    <td><div class="service-group"><span class="badge badge-local">LA</span><span class="service-extra">6pm: LA</span></div></td>
+                    <td><span class="badge badge-minister">DAWE</span></td>
+                    <td><div class="service-group"><span class="badge badge-minister">CREIGHTON</span><span class="service-extra">4pm: CREIGHTON Messy</span></div></td>
+                    <td><span class="badge badge-minister">CREIGHTON HC</span></td>
+                    <td><div class="service-group"><span class="badge badge-minister">CREIGHTON HC</span><span class="badge badge-local">WL</span><span class="service-extra">6pm: LA</span></div></td>
+                    <td><div class="service-group"><span class="badge badge-minister">BONDS</span><span class="service-extra">4pm: CREIGHTON Messy</span></div></td>
+                    <td><div class="service-group"><span class="badge badge-minister">CREIGHTON</span><span class="service-extra">6pm: LA</span></div></td>
+                    <td><span class="badge badge-local">WL</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">Shern Hall<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">11:00 AM</span></td>
+                    <td><span class="badge badge-minister">HII HC</span></td>
+                    <td><span class="badge badge-minister">ACQUAH</span></td>
+                    <td><span class="badge badge-minister">HII</span></td>
+                    <td><span class="badge badge-minister">DAWE</span></td>
+                    <td><span class="badge badge-minister">HII</span></td>
+                    <td><span class="badge badge-minister">HII</span></td>
+                    <td><span class="badge badge-minister">CREIGHTON</span></td>
+                    <td><span class="badge badge-minister">HII GCM</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-minister">HII HC</span></td>
+                    <td><span class="badge badge-minister">BONDS</span></td>
+                    <td><span class="badge badge-minister">HII HC</span></td>
+                    <td><span class="badge badge-minister">M HALL</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">South Chingford<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">10:30 AM</span></td>
+                    <td><span class="badge badge-minister">FUMMEY HC</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">FUMMEY</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">FUMMEY</span></td>
+                    <td><span class="badge badge-minister">FUMMEY HC</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">FUMMEY</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">FUMMEY HC</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">FUMMEY</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">FUMMEY</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">Trinity Debden<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">10:30 AM</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-minister">4 CREIGHTON Brick</span></td>
+                    <td><span class="badge badge-minister">CREIGHTON HC</span></td>
+                    <td><span class="badge badge-local">LA Café</span></td>
+                    <td><span class="badge badge-minister">CREIGHTON Messy</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">4 CREIGHTON Brick</span></td>
+                    <td><span class="badge badge-minister">CREIGHTON HC</span></td>
+                    <td><span class="badge badge-local">LA Café</span></td>
+                    <td><span class="badge badge-minister">H HALL</span></td>
+                    <td><span class="badge badge-minister">4 CREIGHTON Brick</span></td>
+                    <td><span class="badge badge-minister">CREIGHTON HC</span></td>
+                    <td><span class="badge badge-local">LA Café</span></td>
+                    <td><span class="badge badge-minister">CREIGHTON</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">Winchester Road<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">10:30 AM</span></td>
+                    <td><span class="badge badge-minister">LECKEY</span></td>
+                    <td><span class="badge badge-minister">NJERU A P</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><span class="badge badge-minister">BONDS</span></td>
+                    <td><span class="badge badge-minister">NJERU HC</span></td>
+                    <td><div class="service-group"><span class="badge badge-minister">9 NJERU HC</span><span class="badge badge-minister">1030 H HALL</span></div></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                    <td><span class="badge badge-minister">WHITE</span></td>
+                    <td><span class="badge badge-minister">NJERU HC GCM</span></td>
+                    <td><span class="badge badge-minister">DAWE</span></td>
+                    <td><span class="badge badge-minister">ADCOCK CA</span></td>
+                    <td><span class="badge badge-local">WL</span></td>
+                    <td><span class="badge badge-minister">NJERU HC</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                </tr>
+
+                <tr>
+                    <td class="church-col">Woodford<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--muted-text);">10:30 AM</span></td>
+                    <td><span class="badge badge-minister">M HALL</span></td>
+                    <td><span class="badge badge-minister">HII HC</span></td>
+                    <td><span class="badge badge-minister">LONG</span></td>
+                    <td><span class="badge badge-minister">HII</span></td>
+                    <td><span class="badge badge-minister">BONDS</span></td>
+                    <td><span class="badge badge-minister">HII</span></td>
+                    <td><span class="badge badge-minister">HII HC</span></td>
+                    <td><div class="service-group"><span class="badge badge-minister">LECKEY</span><span class="service-extra">3.30pm: HII Messy</span></div></td>
+                    <td><span class="badge badge-minister">M HALL</span></td>
+                    <td><span class="badge badge-local">LA</span></td>
+                    <td><div class="service-group"><span class="badge badge-minister">HII HC</span><span class="service-extra">3.30pm: HII Messy</span></div></td>
+                    <td><span class="badge badge-minister">H HALL</span></td>
+                    <td><span class="badge badge-minister">HII</span></td>
+                    <td><span class="badge badge-minister">TWEEDALE</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="footer">
+        <strong>Plan Reference / Abbreviations</strong>
+        <div class="footer-abbreviations">
+            <span><strong>A</strong> All Age Worship</span>
+            <span><strong>B</strong> Baptism</span>
+            <span><strong>CA</strong> Church Anniversary</span>
+            <span><strong>C</strong> Carols</span>
+            <span><strong>COV</strong> Covenant Service</span>
+            <span><strong>CW</strong> Café Worship</span>
+            <span><strong>GCM</strong> General Church Meeting</span>
+            <span><strong>HF</strong> Harvest Festival</span>
+            <span><strong>LA</strong> Local Arrangement</span>
+            <span><strong>MC / Messy</strong> Messy Church</span>
+            <span><strong>P</strong> Parade Service</span>
+            <span><strong>HC</strong> Holy Communion</span>
+            <span><strong>WL</strong> Worship Leaders</span>
+            <span><strong>Xt</strong> Christingle</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
