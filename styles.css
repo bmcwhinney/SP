@@ -73,9 +73,18 @@ img { max-width: 100%; height: auto; display: block; }
 .trust-banner strong { font-weight: 700; }
 
 /* Page Hero (subpages) */
-.page-hero { background-color: var(--white); padding: 80px 24px 60px; text-align: center; border-bottom: 3px solid var(--taupe); }
-.page-hero h1 { font-size: 2.5rem; }
-.page-hero .tagline { font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem; }
+.page-hero {
+    background: url('heroimage.webp') center/cover no-repeat;
+    padding: 100px 24px 80px;
+    text-align: center;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-hero .container { width: 100%; }
+.page-hero h1 { font-size: 2.5rem; color: #5A5A5A; }
+.page-hero .tagline { font-size: 1rem; color: #5A5A5A; margin-top: 0.5rem; opacity: 0.9; }
 
 /* Content Sections (subpages) */
 .content-section { padding: 60px 0; }
