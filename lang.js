@@ -166,6 +166,7 @@
             mc_teams_4: 'Bring coherence to teams, collaborators, and the project as a whole',
             mc_teams_outro: 'By making invisible dynamics visible, this process supports healthy collaboration and ensures your creative vision remains intact from development through delivery.',
             mc_cta_text: 'To explore Media Constellations for your project or team, contact Sara to discuss how this approach could support your creative work.',
+            mc_find_out_more: 'Find out more here',
             /* systemic-therapy */
             st_what_title: 'What is Systemic Therapy?',
             st_what_p1: 'Systemic therapy is a well-established, evidence-based form of psychotherapy that focuses on understanding difficulties within the context of relationships, life circumstances, and wider social systems. Rather than seeing problems in isolation, a systemic approach explores how patterns develop and are maintained over time, and how change becomes possible.',
@@ -367,6 +368,7 @@
             mc_teams_4: 'Teams, Mitwirkende und das Projekt als Ganzes in Kohärenz zu bringen',
             mc_teams_outro: 'Indem unsichtbare Dynamiken sichtbar gemacht werden, unterstützt dieser Prozess gesunde Zusammenarbeit und stellt sicher, dass Ihre kreative Vision von der Entwicklung bis zur Fertigstellung intakt bleibt.',
             mc_cta_text: 'Um Media Constellations für Ihr Projekt oder Team zu erkunden, kontaktieren Sie Sara, um zu besprechen, wie dieser Ansatz Ihre kreative Arbeit unterstützen könnte.',
+            mc_find_out_more: 'Mehr erfahren',
             /* systemic-therapy */
             st_what_title: 'Was ist Systemische Therapie?',
             st_what_p1: 'Systemische Therapie ist eine etablierte, evidenzbasierte Form der Psychotherapie, die Schwierigkeiten im Kontext von Beziehungen, Lebensumständen und weiteren sozialen Systemen betrachtet. Statt Probleme isoliert zu sehen, erkundet ein systemischer Ansatz, wie Muster sich entwickeln und über die Zeit aufrechterhalten werden und wie Veränderung möglich wird.',
