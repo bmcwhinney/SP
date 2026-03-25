@@ -6,7 +6,7 @@
     <div class="overlay" aria-hidden="true"></div>
     <header>
         <nav aria-label="Main navigation">
-            <a href="/" class="logo"><img src="/splogoforsystemictherapy.webp" alt="Sara Poss Therapy" width="120" height="60" decoding="async" loading="eager"></a>
+            <a href="/" class="logo"><img src="/SaraPOSSLOGO.png" alt="Sara Poss Therapy" width="283" height="162" decoding="async" loading="eager"></a>
             <button class="menu-toggle" aria-label="Toggle navigation menu" data-i18n-aria="nav_toggle"><span></span><span></span><span></span></button>
             <div class="lang-toggle">
                 <button id="lang-en" class="active" aria-label="English">\u{1F1EC}\u{1F1E7}</button>
