@@ -26,8 +26,14 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="preload" href="mediaconstellations.webp" as="image" fetchpriority="high">
 
     <style>
+        /* Page-specific hero background */
+        .page-hero {
+            background: url('mediaconstellations.webp') center/cover no-repeat;
+        }
+
         .container { max-width: 800px; }
 
         .media-card { background: #E6EDF0; padding: 28px; border-radius: 8px; border-left: 3px solid var(--accent-color); margin-bottom: 24px; }
