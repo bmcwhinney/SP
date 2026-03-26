@@ -34,6 +34,30 @@
             background: url('mediaconstellations.webp') center/cover no-repeat;
         }
 
+        /* Slight dark overlay for readability */
+        .page-hero {
+            position: relative;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            pointer-events: none;
+        }
+        .page-hero > .container {
+            position: relative;
+            z-index: 1;
+        }
+        .page-hero h1,
+        .page-hero .tagline {
+            color: var(--white);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+        }
+        .page-hero .tagline {
+            opacity: 0.95;
+        }
+
         .container { max-width: 800px; }
 
         .media-card { background: #E6EDF0; padding: 28px; border-radius: 8px; border-left: 3px solid var(--accent-color); margin-bottom: 24px; }
