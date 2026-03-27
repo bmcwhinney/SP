@@ -66,8 +66,6 @@ body.menu-open { overflow: hidden; }
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
         transition: right 0.4s ease;
         overflow-y: auto; z-index: 1000;
-        touch-action: manipulation;
-        overscroll-behavior: contain;
     }
     .nav-links.active { right: 0; }
     .nav-links li { width: 100%; }
@@ -89,7 +87,6 @@ body.menu-open { overflow: hidden; }
         background-color: var(--white); border-radius: 0; margin-top: 8px; padding-left: 12px;
     }
     .has-submenu.active > .submenu { display: block; }
-    .has-submenu .submenu { position: relative; z-index: 2; }
     .submenu li a { font-size: 0.95rem; padding: 10px 20px; }
 
     .menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
