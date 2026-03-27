@@ -29,9 +29,9 @@
                         <li class="has-submenu">
                             <a href="#" class="submenu-toggle" data-i18n="nav_const_workshops">Family Constellations Workshops ▾</a>
                             <ul class="submenu">
-                                <li><a href="/workshops.html" data-i18n="nav_const_open">Open Group Workshops</a></li>
-                                <li><a href="/bespoke-workshops.html" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
-                                <li><a href="/media-constellations.html" data-i18n="nav_mc">Media Constellations</a></li>
+                                <li><a href="/workshops" data-i18n="nav_const_open">Open Group Workshops</a></li>
+                                <li><a href="/bespoke-workshops" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
+                                <li><a href="/media-constellations" data-i18n="nav_mc">Media Constellations</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -109,30 +109,44 @@
             });
         });
 
-        document.querySelectorAll('.nav-links a:not(.dropdown-toggle):not(.submenu-toggle)').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (window.innerWidth > 992) return;
-                const href = link.getAttribute('href');
-                if (href && href !== '#') {
-                    const [path, hash] = href.split('#');
-                    const pathParts = window.location.pathname.split('/').filter(Boolean);
-                    const currentPath = pathParts[pathParts.length - 1] || '';
-                    const linkPathRaw = (path || '').replace(/^\//, '').split('#')[0];
-                    const normalize = (p) => (p || '').replace(/\.html$/, '');
-                    const samePage = hash && (!linkPathRaw || normalize(linkPathRaw) === normalize(currentPath));
-                    if (samePage) {
-                        e.preventDefault();
-                        closeMenu();
-                        const target = document.getElementById(hash);
-                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    } else {
-                        // Let native link navigation proceed without collapsing menu first.
-                        // Collapsing before navigation can cause wrong-target taps on some mobile browsers.
-                    }
-                } else {
-                    closeMenu();
-                }
-            });
+        /* Delegated handler: reliably resolves the tapped <a> (e.g. click on text inside translated HTML) and navigates on mobile without wrong-target issues. */
+        navLinks.addEventListener('click', (e) => {
+            if (window.innerWidth > 992) return;
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+            const link = e.target.closest('a');
+            if (!link || !navLinks.contains(link)) return;
+            if (link.classList.contains('dropdown-toggle') || link.classList.contains('submenu-toggle')) return;
+
+            const href = link.getAttribute('href');
+            if (!href || href === '#') {
+                closeMenu();
+                return;
+            }
+
+            if (href.startsWith('mailto:')) {
+                closeMenu();
+                return;
+            }
+
+            const [pathPart, hash] = href.split('#');
+            const pathParts = window.location.pathname.split('/').filter(Boolean);
+            const currentPath = pathParts[pathParts.length - 1] || '';
+            const linkPathRaw = (pathPart || '').replace(/^\//, '').split('#')[0];
+            const normalize = (p) => (p || '').replace(/\.html$/, '');
+            const samePage = hash && (!linkPathRaw || normalize(linkPathRaw) === normalize(currentPath));
+
+            if (samePage) {
+                e.preventDefault();
+                closeMenu();
+                const target = document.getElementById(hash);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                return;
+            }
+
+            e.preventDefault();
+            closeMenu();
+            window.location.assign(link.href);
         });
 
         window.addEventListener('resize', () => {
