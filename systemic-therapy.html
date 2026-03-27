@@ -39,9 +39,7 @@
         .option-card a:hover { text-decoration: underline; }
 
         .fees-table { width: 100%; min-width: 500px; border-collapse: collapse; margin: 1.5rem 0; }
-        .fees-wrapper { overflow-x: auto; position: relative; }
-        .fees-wrapper::after { content: ''; position: sticky; right: 0; top: 0; display: block; width: 40px; height: 100%; background: linear-gradient(to right, transparent, var(--bg-color) 80%); pointer-events: none; position: absolute; top: 0; right: 0; bottom: 0; z-index: 1; opacity: 1; transition: opacity 0.3s; }
-        .fees-wrapper.scrolled-end::after { opacity: 0; }
+        .fees-wrapper { overflow-x: auto; }
         .fees-scroll-hint { display: none; text-align: center; font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px; opacity: 0.7; }
         .fees-table th, .fees-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #E6EDF0; }
         .fees-table th { font-family: var(--font-body); font-weight: 600; color: var(--text-primary); }
@@ -228,17 +226,6 @@
                 <p class="fees-scroll-hint" data-i18n="st_fees_scroll_hint">Swipe to see all fees &rarr;</p>
             </div>
         </section>
-
-        <script>
-        (function() {
-            var w = document.querySelector('.fees-wrapper');
-            if (!w) return;
-            w.addEventListener('scroll', function() {
-                var atEnd = w.scrollLeft + w.clientWidth >= w.scrollWidth - 2;
-                w.classList.toggle('scrolled-end', atEnd);
-            });
-        })();
-        </script>
 
         <section class="testimonials">
             <div class="container">
