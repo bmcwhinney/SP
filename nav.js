@@ -17,6 +17,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" aria-expanded="false" data-i18n="nav_systemic">Systemic Therapy ▾</a>
                     <ul class="dropdown-menu">
+                        <li><a href="/systemic-therapy" data-i18n="nav_what_systemic">What is Systemic Therapy?</a></li>
                         <li><a href="/systemic-therapy#individual" data-i18n="nav_individual">Individual Systemic Therapy</a></li>
                         <li><a href="/systemic-therapy#couples" data-i18n="nav_couples">Relationship &amp; Couples Therapy</a></li>
                         <li><a href="/systemic-therapy#family" data-i18n="nav_family">Family Therapy</a></li>
