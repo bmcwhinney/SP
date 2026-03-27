@@ -126,8 +126,8 @@
                         const target = document.getElementById(hash);
                         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     } else {
-                        // Let native link navigation handle page changes for smoother, more reliable mobile routing.
-                        closeMenu();
+                        // Let native link navigation proceed without collapsing menu first.
+                        // Collapsing before navigation can cause wrong-target taps on some mobile browsers.
                     }
                 } else {
                     closeMenu();
