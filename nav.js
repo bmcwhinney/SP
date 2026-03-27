@@ -114,18 +114,20 @@
                 if (window.innerWidth > 992) return;
                 const href = link.getAttribute('href');
                 if (href && href !== '#') {
-                    e.preventDefault();
-                    closeMenu();
                     const [path, hash] = href.split('#');
                     const pathParts = window.location.pathname.split('/').filter(Boolean);
                     const currentPath = pathParts[pathParts.length - 1] || '';
-                    const linkPath = (path || '').replace(/^\//, '').split('#')[0];
-                    const samePage = hash && (!linkPath || linkPath === currentPath);
-                    if (hash && samePage) {
+                    const linkPathRaw = (path || '').replace(/^\//, '').split('#')[0];
+                    const normalize = (p) => (p || '').replace(/\.html$/, '');
+                    const samePage = hash && (!linkPathRaw || normalize(linkPathRaw) === normalize(currentPath));
+                    if (samePage) {
+                        e.preventDefault();
+                        closeMenu();
                         const target = document.getElementById(hash);
                         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     } else {
-                        window.location.href = href;
+                        // Let native link navigation handle page changes for smoother, more reliable mobile routing.
+                        closeMenu();
                     }
                 } else {
                     closeMenu();
