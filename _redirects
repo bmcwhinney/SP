@@ -1,6 +1,3 @@
-# Force www (canonical domain)
-https://saraposs.com/*  https://www.saraposs.com/:splat  301!
-
 # Clean URLs: serve .html files at path without extension
 /contact              /contact.html              200
 /1to1-sessions        /1to1-sessions.html        200
