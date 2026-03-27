@@ -200,6 +200,7 @@
             st_fees_th_online_90: 'Online (90 min)',
             st_fees_th_inperson: 'In-person (60 min)',
             st_fees_th_inperson_90: 'In-person (90 min)',
+            st_fees_scroll_hint: 'Swipe to see all fees \u2192',
             st_testimonial_quote: '\u201CI have had years of therapy but only a few sessions with Sara have made me see, feel and understand things I have not been able to fathom before. Working with Sara has been transformational.\u201D',
             st_testimonial_author: '\u2014 Julie P',
             pages: {
@@ -409,6 +410,7 @@
             st_fees_th_online_90: 'Online (90 Min.)',
             st_fees_th_inperson: 'Persönlich (60 Min.)',
             st_fees_th_inperson_90: 'Persönlich (90 Min.)',
+            st_fees_scroll_hint: 'Wischen f\u00FCr alle Honorare \u2192',
             st_testimonial_quote: '\u201EIch hatte jahrelang Therapie, aber erst wenige Sitzungen mit Sara haben mich Dinge sehen, f\u00FChlen und verstehen lassen, die ich vorher nicht erfassen konnte. Die Arbeit mit Sara war transformativ.\u201C',
             st_testimonial_author: '\u2014 Julie P',
             pages: {
