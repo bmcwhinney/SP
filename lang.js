@@ -199,6 +199,8 @@
             st_fees_th_online_90: 'Online (90 min)',
             st_fees_th_inperson: 'In-person (60 min)',
             st_fees_th_inperson_90: 'In-person (90 min)',
+            st_testimonial_quote: '\u201CI have had years of therapy but only a few sessions with Sara have made me see, feel and understand things I have not been able to fathom before. Working with Sara has been transformational.\u201D',
+            st_testimonial_author: '\u2014 Julie P',
             pages: {
                 index: { page_title: 'Sara Poss Therapy | Systemic Therapist North London & Online', meta_description: 'Sara Poss, UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online. Book a free discovery call.' },
                 contact: { page_title: 'Contact | Sara Poss Therapy', meta_description: 'Get in touch with Sara Poss for systemic therapy and Family Constellations. Book a complimentary introductory call.' },
@@ -405,6 +407,8 @@
             st_fees_th_online_90: 'Online (90 Min.)',
             st_fees_th_inperson: 'Persönlich (60 Min.)',
             st_fees_th_inperson_90: 'Persönlich (90 Min.)',
+            st_testimonial_quote: '\u201EIch hatte jahrelang Therapie, aber erst wenige Sitzungen mit Sara haben mich Dinge sehen, f\u00FChlen und verstehen lassen, die ich vorher nicht erfassen konnte. Die Arbeit mit Sara war transformativ.\u201C',
+            st_testimonial_author: '\u2014 Julie P',
             pages: {
                 index: { page_title: 'Sara Poss Therapie | Systemische Therapeutin Nord-London & Online', meta_description: 'Sara Poss, UKCP-registrierte systemische Therapeutin in Nord-London. Systemische Therapie und Familienaufstellungen für Einzelpersonen, Paare und Familien. Vor Ort & online.' },
                 contact: { page_title: 'Kontakt | Sara Poss Therapie', meta_description: 'Kontaktieren Sie Sara Poss für systemische Therapie und Familienaufstellungen. Vereinbaren Sie ein kostenloses Erstgespräch.' },

@@ -55,9 +55,22 @@
         .detail-item p { margin: 0; font-size: 0.95rem; }
         .detail-item strong { display: block; margin-bottom: 6px; color: var(--text-primary); }
 
+        .testimonials { background-color: #151d35; color: var(--white); padding-top: 100px; padding-bottom: 100px; text-align: center; }
+        .testimonials h2 { color: var(--white); font-size: 2.5rem; border-bottom: none; padding-bottom: 0; }
+        .quote { font-family: var(--font-heading); font-style: italic; font-size: 1.5rem; max-width: 800px; margin: 40px auto; line-height: 1.6; font-weight: 400; }
+        .quote-author { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-top: 16px; font-style: normal; }
+        .google-stars { margin-top: 32px; }
+        .google-stars .stars { font-size: 1.4rem; color: #F4B400; letter-spacing: 3px; }
+        .google-stars .star-label { display: block; font-size: 0.85rem; color: var(--white); margin-top: 6px; font-weight: 400; }
+        .google-link { color: var(--white); text-decoration: underline; margin-top: 16px; display: inline-block; font-weight: 700; }
+        .google-link:hover { color: var(--white); }
+
         @media (max-width: 768px) {
             .options-grid { grid-template-columns: 1fr; }
             .details-grid { grid-template-columns: 1fr; }
+            .testimonials { padding-top: 60px; padding-bottom: 60px; }
+            .testimonials h2 { font-size: 1.75rem; }
+            .quote { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -208,6 +221,19 @@
                     </tbody>
                 </table>
                 </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 data-i18n="testimonials_heading">What Clients Say</h2>
+                <p class="quote" data-i18n="st_testimonial_quote">"I have had years of therapy but only a few sessions with Sara have made me see, feel and understand things I have not been able to fathom before. Working with Sara has been transformational."</p>
+                <p class="quote-author" data-i18n="st_testimonial_author">— Julie P</p>
+                <div class="google-stars">
+                    <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+                    <span class="star-label" data-i18n="testimonials_stars">5 Star Google Reviews</span>
+                </div>
+                <a href="https://g.co/kgs/zQibxZM" class="google-link" target="_blank" rel="noopener" data-i18n="testimonials_link">Read more on Google Reviews</a>
             </div>
         </section>
     </main>
