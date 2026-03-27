@@ -29,9 +29,9 @@
                         <li class="has-submenu">
                             <a href="#" class="submenu-toggle" data-i18n="nav_const_workshops">Family Constellations Workshops ▾</a>
                             <ul class="submenu">
-                                <li><a href="/workshops" data-i18n="nav_const_open">Open Group Workshops</a></li>
-                                <li><a href="/bespoke-workshops" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
-                                <li><a href="/media-constellations" data-i18n="nav_mc">Media Constellations</a></li>
+                                <li><a href="/workshops.html" data-i18n="nav_const_open">Open Group Workshops</a></li>
+                                <li><a href="/bespoke-workshops.html" data-i18n="nav_const_bespoke">Bespoke Workshops</a></li>
+                                <li><a href="/media-constellations.html" data-i18n="nav_mc">Media Constellations</a></li>
                             </ul>
                         </li>
                     </ul>
