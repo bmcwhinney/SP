@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FFFFFF">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <title>Sara Poss Therapy | Systemic Therapist North London & Online</title>
     <meta name="description" content="Sara Poss, UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online. Book a free discovery call.">
     <link rel="canonical" href="https://www.saraposs.com/">
     <link rel="alternate" hreflang="en" href="https://www.saraposs.com/">
     <link rel="alternate" hreflang="de" href="https://www.saraposs.com/">
     <link rel="alternate" hreflang="x-default" href="https://www.saraposs.com/">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:site_name" content="Sara Poss Therapy">
     <meta property="og:title" content="Sara Poss Therapy | Systemic Therapist North London & Online">
     <meta property="og:description" content="UKCP-registered systemic therapist in North London offering individual, couples, and family therapy alongside transformative Family Constellation sessions. In-person & online.">
     <meta property="og:type" content="website">
@@ -17,11 +22,14 @@
     <meta property="og:image" content="https://www.saraposs.com/sara-photo.jpg">
     <meta property="og:image:width" content="700">
     <meta property="og:image:height" content="1050">
+    <meta property="og:image:alt" content="Sara Poss, Systemic Therapist and Family Constellations Facilitator in North London">
     <meta property="og:locale" content="en_GB">
     <meta property="og:locale:alternate" content="de_DE">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sara Poss Therapy | Systemic Therapist North London & Online">
     <meta name="twitter:description" content="UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations. In-person & online.">
+    <meta name="twitter:image" content="https://www.saraposs.com/sara-photo.jpg">
+    <meta name="twitter:image:alt" content="Sara Poss, Systemic Therapist and Family Constellations Facilitator">
     <link rel="preload" as="image" href="heroimage.webp" fetchpriority="high">
     <link rel="dns-prefetch" href="https://wa.me">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -284,18 +292,29 @@
         "@context": "https://schema.org",
         "@graph": [
             {
+                "@type": "WebSite",
+                "@id": "https://www.saraposs.com/#website",
+                "url": "https://www.saraposs.com/",
+                "name": "Sara Poss Therapy",
+                "description": "Systemic Therapy and Family Constellations in North London and online.",
+                "publisher": { "@id": "https://www.saraposs.com/#organization" },
+                "inLanguage": ["en", "de"]
+            },
+            {
                 "@type": "Person",
                 "@id": "https://www.saraposs.com/#sara-poss",
                 "name": "Sara Poss",
                 "jobTitle": "Systemic Therapist & Family Constellations Facilitator",
-                "description": "UKCP-registered systemic therapist and certified family constellations facilitator. Works with individuals, couples, and families in North London and online.",
+                "description": "UKCP-registered systemic therapist and certified family constellations facilitator with over ten years' experience. Works with individuals, couples, and families in North London and online.",
                 "image": "https://www.saraposs.com/sara-photo.jpg",
                 "email": "saraposs4@gmail.com",
                 "telephone": "+447903539734",
+                "url": "https://www.saraposs.com/",
                 "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "McCrone House, Leighton Road",
                     "addressLocality": "London",
+                    "addressRegion": "Greater London",
                     "postalCode": "NW5",
                     "addressCountry": "GB"
                 },
@@ -309,6 +328,16 @@
                         "@type": "EducationalOccupationalCredential",
                         "credentialCategory": "Professional Registration",
                         "recognizedBy": { "@type": "Organization", "name": "UKCP - UK Council for Psychotherapy" }
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "credentialCategory": "Professional Membership",
+                        "recognizedBy": { "@type": "Organization", "name": "DGSF - German Society for Systemic Therapy" }
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "credentialCategory": "Professional Membership",
+                        "recognizedBy": { "@type": "Organization", "name": "AFSP - Association For Family And Systemic Psychotherapy" }
                     }
                 ]
             },
@@ -317,27 +346,44 @@
                 "@id": "https://www.saraposs.com/#organization",
                 "name": "Sara Poss Therapy",
                 "url": "https://www.saraposs.com/",
+                "logo": "https://www.saraposs.com/SaraPOSSLOGO.png",
                 "description": "UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online.",
                 "image": "https://www.saraposs.com/sara-photo.jpg",
                 "email": "saraposs4@gmail.com",
                 "telephone": "+447903539734",
+                "priceRange": "£80–£290",
+                "currenciesAccepted": "GBP",
+                "paymentAccepted": "Bank Transfer",
                 "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "McCrone House, Leighton Road",
                     "addressLocality": "London",
+                    "addressRegion": "Greater London",
                     "postalCode": "NW5",
                     "addressCountry": "GB"
                 },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 51.5525,
+                    "longitude": -0.1403
+                },
                 "provider": { "@id": "https://www.saraposs.com/#sara-poss" },
+                "founder": { "@id": "https://www.saraposs.com/#sara-poss" },
                 "areaServed": [
                     { "@type": "City", "name": "London" },
-                    { "@type": "AdministrativeArea", "name": "North London" }
+                    { "@type": "AdministrativeArea", "name": "North London" },
+                    { "@type": "AdministrativeArea", "name": "Kentish Town" },
+                    { "@type": "AdministrativeArea", "name": "Camden" }
                 ],
                 "availableChannel": [
                     { "@type": "ServiceChannel", "name": "In-person (North London)" },
-                    { "@type": "ServiceChannel", "name": "Online" }
+                    { "@type": "ServiceChannel", "name": "Online via Zoom" }
                 ],
-                "serviceType": ["Systemic Therapy", "Family Constellations", "Couples Therapy", "Family Therapy"],
+                "serviceType": ["Systemic Therapy", "Family Constellations", "Couples Therapy", "Family Therapy", "Individual Therapy"],
+                "sameAs": [
+                    "https://www.linkedin.com/in/sara-poss/",
+                    "https://www.instagram.com/sara_and_therapy/"
+                ],
                 "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": "Therapy Services",
@@ -346,8 +392,27 @@
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "Systemic Therapy",
-                                "description": "Evidence-based psychotherapy for individuals, couples and families. North London and online via Zoom."
+                                "name": "Individual Systemic Therapy",
+                                "url": "https://www.saraposs.com/systemic-therapy#individual",
+                                "description": "Evidence-based psychotherapy for individuals. North London and online via Zoom."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Couples Therapy",
+                                "url": "https://www.saraposs.com/systemic-therapy#couples",
+                                "description": "Relationship and couples therapy to improve communication, strengthen connection, and resolve conflicts."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Family Therapy",
+                                "url": "https://www.saraposs.com/systemic-therapy#family",
+                                "description": "Family therapy exploring dynamics, communication patterns, and relationships within the family system."
                             }
                         },
                         {
@@ -355,6 +420,7 @@
                             "itemOffered": {
                                 "@type": "Service",
                                 "name": "1:1 Family Constellations Sessions",
+                                "url": "https://www.saraposs.com/1to1-sessions",
                                 "description": "One-to-one sessions exploring family dynamics, unconscious loyalties and generational patterns."
                             }
                         },
@@ -363,6 +429,7 @@
                             "itemOffered": {
                                 "@type": "Service",
                                 "name": "Family Constellations Workshops",
+                                "url": "https://www.saraposs.com/workshops",
                                 "description": "Open group workshops uncovering hidden family dynamics and generational patterns."
                             }
                         },
@@ -371,7 +438,17 @@
                             "itemOffered": {
                                 "@type": "Service",
                                 "name": "Bespoke Workshops",
+                                "url": "https://www.saraposs.com/bespoke-workshops",
                                 "description": "Tailored systemic and Family Constellations workshops for groups, teams, and organisations. UK and Europe."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Media Constellations",
+                                "url": "https://www.saraposs.com/media-constellations",
+                                "description": "Systemic constellation work for film, TV, and production teams."
                             }
                         }
                     ]
@@ -383,7 +460,7 @@
                 "url": "https://www.saraposs.com/",
                 "name": "Sara Poss Therapy | Systemic Therapist North London & Online",
                 "description": "UKCP-registered systemic therapist in North London offering Systemic Therapy and Family Constellations for individuals, couples, and families. In-person & online.",
-                "isPartOf": { "@id": "https://www.saraposs.com/#organization" },
+                "isPartOf": { "@id": "https://www.saraposs.com/#website" },
                 "about": { "@id": "https://www.saraposs.com/#organization" },
                 "inLanguage": ["en", "de"]
             }

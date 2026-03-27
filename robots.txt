@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /fccode/
 
 # Sitemap
 Sitemap: https://www.saraposs.com/sitemap.xml
