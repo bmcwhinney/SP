@@ -81,6 +81,13 @@
 
         overlay.addEventListener('click', closeMenu);
 
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeMenu();
+                menuToggle.focus();
+            }
+        });
+
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
             toggle.addEventListener('click', (e) => {
                 if (window.innerWidth <= 992) {
@@ -95,6 +102,19 @@
                     });
                     const isOpen = parent.classList.toggle('active');
                     toggle.setAttribute('aria-expanded', isOpen);
+                }
+            });
+            toggle.addEventListener('keydown', (e) => {
+                if (window.innerWidth > 992 && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+                    const menu = parent.querySelector('.dropdown-menu');
+                    const isOpen = parent.classList.toggle('active');
+                    toggle.setAttribute('aria-expanded', isOpen);
+                    if (isOpen && menu) {
+                        const firstLink = menu.querySelector('a');
+                        if (firstLink) firstLink.focus();
+                    }
                 }
             });
         });
@@ -128,6 +148,19 @@
                     }
                 } else {
                     closeMenu();
+                }
+            });
+        });
+
+        document.querySelectorAll('.dropdown-menu a, .submenu a').forEach(link => {
+            link.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const dropdown = link.closest('.dropdown');
+                    if (dropdown) {
+                        dropdown.classList.remove('active');
+                        const toggle = dropdown.querySelector('.dropdown-toggle');
+                        if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.focus(); }
+                    }
                 }
             });
         });

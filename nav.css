@@ -32,6 +32,16 @@ nav { display: flex; align-items: center; padding: 20px 24px; max-width: 1200px;
 .submenu li a:hover { background-color: #F5F5F5; color: var(--accent-color); padding-left: 25px; }
 .submenu-toggle { cursor: pointer; }
 
+/* Keyboard focus for dropdown items */
+.dropdown-menu li a:focus-visible,
+.submenu li a:focus-visible { background-color: #F5F5F5; color: var(--accent-color); outline: 2px solid var(--accent-color); outline-offset: -2px; }
+.dropdown-toggle:focus-visible,
+.submenu-toggle:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+
+/* Desktop: show dropdown on focus-within for keyboard nav */
+.dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.has-submenu:focus-within > .submenu { opacity: 1; visibility: visible; transform: translateX(0); }
+
 /* Hamburger (hidden on desktop) */
 .menu-toggle { display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; z-index: 1001; background: transparent; border: none; }
 .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--text-primary); border-radius: 3px; transition: all 0.3s; }

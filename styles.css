@@ -24,9 +24,11 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html {
     font-size: 100%;
-    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
 }
 body {
     font-family: var(--font-body);
@@ -169,10 +171,16 @@ footer p { margin-bottom: 20px; }
     .accreditation-badges img { height: 70px; max-width: 260px; }
 }
 
-/* Very small screens – ensure readable minimum font sizes */
+/* Very small screens */
 @media (max-width: 400px) {
     html { font-size: 16px; }
     .trust-banner { font-size: 0.875rem; }
     .footer-link { font-size: 0.9375rem; }
     .events-float .events-panel { width: min(260px, calc(100vw - 76px)); left: 58px; }
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .whatsapp-float.pulse { animation: none; }
 }
