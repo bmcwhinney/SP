@@ -106,6 +106,9 @@ footer p { margin-bottom: 20px; }
 .footer-link { color: var(--text-primary); font-size: 0.9rem; font-weight: 500; }
 .footer-link:hover { color: #D88C8C; }
 .footer-legal { margin-top: 24px; font-size: 0.875rem; color: #666; }
+.footer-credit { font-size: 0.7rem; color: #bbb; margin-top: 8px; letter-spacing: 0.3px; }
+.footer-credit a { color: #bbb; text-decoration: none; }
+.footer-credit a:hover { color: #999; }
 
 /* Accreditation badges – sitewide footer */
 .accreditation-badges { display: flex; justify-content: center; align-items: center; gap: 48px; margin-top: 36px; padding-top: 36px; border-top: 1px solid #EAEAEA; flex-wrap: wrap; }
