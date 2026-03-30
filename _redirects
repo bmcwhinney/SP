@@ -1,3 +1,7 @@
+# Social apps (e.g. WhatsApp) often fetch http:// first — 301 to canonical HTTPS + www
+http://saraposs.com/*       https://www.saraposs.com/:splat  301!
+http://www.saraposs.com/*   https://www.saraposs.com/:splat  301!
+
 # Clean URLs: serve .html files at path without extension
 /contact              /contact.html              200
 /1to1-sessions        /1to1-sessions.html        200
