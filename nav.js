@@ -38,7 +38,7 @@
                     </ul>
                 </li>
                 <li><a href="/contact" data-i18n="nav_contact">Contact</a></li>
-                <li><a href="mailto:saraposs4@gmail.com" class="btn nav-cta" data-i18n="nav_cta">Book Discovery Call</a></li>
+                <li><a href="https://www.cal.eu/saraposs/15-minute-discovery-call?user=saraposs&month=2026-04" class="btn nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="nav_cta">Book Discovery Call</a></li>
             </ul>
         </nav>
     </header>`;
