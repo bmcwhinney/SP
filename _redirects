@@ -10,6 +10,12 @@ http://www.saraposs.com/*   https://www.saraposs.com/:splat  301!
 /media-constellations  /media-constellations.html 200
 /systemic-therapy     /systemic-therapy.html     200
 
+# Old site / CMS paths (no longer exist — send to home so SERP clicks don’t 404)
+/faq                  /                          301
+/faqs                 /                          301
+/FAQ                  /                          301
+/FAQs                 /                          301
+
 # Redirect old .html URLs to clean URLs (301 permanent)
 /contact.html         /contact                   301
 /1to1-sessions.html   /1to1-sessions             301
