@@ -69,7 +69,7 @@
             nav_toggle: 'Toggle navigation menu',
             events_tooltip: 'Upcoming Events',
             events_title: 'Family & Personal Issue Workshop',
-            events_date: '7th May 2026',
+            events_date: '14th May 2026',
             events_time: '6pm - 9pm',
             events_btn: 'Book tickets',
             page_contact_title: 'Contact',

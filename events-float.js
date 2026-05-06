@@ -17,7 +17,7 @@
             '<span class="events-date-hint" data-i18n="events_tooltip" aria-hidden="true">Upcoming Events</span>' +
             '<div class="events-panel" role="dialog" aria-labelledby="events-title" aria-hidden="true">' +
                 '<h3 id="events-title" data-i18n="events_title">Family & Personal Issue Workshop</h3>' +
-                '<p class="event-detail" data-i18n="events_date">7th May 2026</p>' +
+                '<p class="event-detail" data-i18n="events_date">14th May 2026</p>' +
                 '<p class="event-detail" data-i18n="events_time">6pm - 9pm</p>' +
                 '<a href="https://www.tickettailor.com/events/sarapossconstellations/2109470" class="btn" target="_blank" rel="noopener noreferrer" data-i18n="events_btn">Book tickets</a>' +
             '</div>';
