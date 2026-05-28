@@ -21,6 +21,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.saraposs.com/1to1-sessions">
     <meta property="og:image" content="https://www.saraposs.com/sara-photo.jpg">
+    <meta property="og:image:width" content="700">
+    <meta property="og:image:height" content="1050">
     <meta property="og:image:alt" content="Sara Poss, Family Constellations facilitator offering 1:1 sessions">
     <meta property="og:locale" content="en_GB">
     <meta property="og:locale:alternate" content="de_DE">
@@ -36,6 +38,8 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="preload" as="image" href="heroimage.webp" fetchpriority="high">
+    <link rel="preload" href="/SaraPOSSLOGO.webp" as="image">
     
     <style>
         /* Narrower content container for long-form pages */
@@ -43,6 +47,56 @@
         .section-icon { display: block; width: 56px; height: 56px; margin: 0 auto 1.25rem; color: var(--dusty-blue); object-fit: contain; }
         .section-logo { width: 180px; height: 180px; }
     </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saraposs.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Family Constellations", "item": "https://www.saraposs.com/1to1-sessions" },
+                    { "@type": "ListItem", "position": 3, "name": "1:1 Sessions" }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://www.saraposs.com/1to1-sessions#webpage",
+                "url": "https://www.saraposs.com/1to1-sessions",
+                "name": "1:1 Family Constellations Sessions | Sara Poss Therapy",
+                "description": "One-to-one Family Constellations sessions with Sara Poss. Explore family dynamics, unconscious loyalties and generational patterns. North London or online via Zoom.",
+                "isPartOf": { "@id": "https://www.saraposs.com/#website" },
+                "about": { "@id": "https://www.saraposs.com/1to1-sessions#service" },
+                "inLanguage": ["en", "de"]
+            },
+            {
+                "@type": "Service",
+                "@id": "https://www.saraposs.com/1to1-sessions#service",
+                "name": "1:1 Family Constellations Sessions",
+                "description": "One-to-one sessions exploring family dynamics, unconscious loyalties and generational patterns. 90-minute sessions in person in North London or online via Zoom.",
+                "provider": { "@id": "https://www.saraposs.com/#sara-poss" },
+                "areaServed": [
+                    { "@type": "City", "name": "London" },
+                    { "@type": "AdministrativeArea", "name": "North London" }
+                ],
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "1:1 Family Constellations (Online, 90 min)",
+                        "priceCurrency": "GBP",
+                        "price": "250"
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "1:1 Family Constellations (In-person, 90 min)",
+                        "priceCurrency": "GBP",
+                        "price": "290"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link" data-i18n="skip_link">Skip to content</a>
@@ -67,7 +121,7 @@
 
         <section class="content-section">
             <div class="container">
-                <img src="splogoforsystemictherapy.webp" alt="Sara Poss Therapy" class="section-icon section-logo" width="180" height="180" loading="lazy" decoding="async">
+                <img src="splogoforsystemictherapy.webp" alt="Sara Poss Therapy" class="section-icon section-logo" width="283" height="162" loading="lazy" decoding="async">
                 <h2 data-i18n="fc_what_title">What is Family Constellations Therapy?</h2>
                 <p data-i18n="fc_what_p1">Family Constellations Therapy (also known as Systemic Constellations) is a therapeutic approach that explores how family history, unconscious loyalties, and generational patterns can influence our lives today.</p>
                 <p data-i18n="fc_what_p2">Many of the difficulties we experience, such as feeling stuck, repeating familiar patterns, or carrying emotions that don't quite feel like our own, can be connected to unresolved experiences within our family system. While these patterns may have been passed down through generations, they are not necessarily ours to carry.</p>
@@ -128,7 +182,7 @@
             <a href="https://www.cal.eu/saraposs/15-minute-discovery-call?user=saraposs&month=2026-04" class="btn footer-cta" target="_blank" rel="noopener noreferrer" data-i18n="footer_cta">Book a Free Discovery Call</a>
 
             <div class="accreditation-badges">
-                <img src="UKCP.png" alt="UKCP - UK Council for Psychotherapy, Professional Standards Authority Accredited Register" loading="lazy" decoding="async" width="500" height="143">
+                <img src="UKCP.webp" alt="UKCP - UK Council for Psychotherapy, Professional Standards Authority Accredited Register" loading="lazy" decoding="async" width="500" height="143">
             </div>
 
             <nav class="footer-nav" aria-label="Footer navigation">
@@ -157,56 +211,7 @@
         <span class="tooltip" data-i18n="wa_tooltip">Message Sara on WhatsApp</span>
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saraposs.com/" },
-                    { "@type": "ListItem", "position": 2, "name": "Family Constellations", "item": "https://www.saraposs.com/1to1-sessions" },
-                    { "@type": "ListItem", "position": 3, "name": "1:1 Sessions" }
-                ]
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://www.saraposs.com/1to1-sessions#webpage",
-                "url": "https://www.saraposs.com/1to1-sessions",
-                "name": "1:1 Family Constellations Sessions | Sara Poss Therapy",
-                "description": "One-to-one Family Constellations sessions with Sara Poss. Explore family dynamics, unconscious loyalties and generational patterns. North London or online via Zoom.",
-                "isPartOf": { "@id": "https://www.saraposs.com/#website" },
-                "about": { "@id": "https://www.saraposs.com/1to1-sessions#service" },
-                "inLanguage": ["en", "de"]
-            },
-            {
-                "@type": "Service",
-                "@id": "https://www.saraposs.com/1to1-sessions#service",
-                "name": "1:1 Family Constellations Sessions",
-                "description": "One-to-one sessions exploring family dynamics, unconscious loyalties and generational patterns. 90-minute sessions in person in North London or online via Zoom.",
-                "provider": { "@id": "https://www.saraposs.com/#sara-poss" },
-                "areaServed": [
-                    { "@type": "City", "name": "London" },
-                    { "@type": "AdministrativeArea", "name": "North London" }
-                ],
-                "offers": [
-                    {
-                        "@type": "Offer",
-                        "name": "1:1 Family Constellations (Online, 90 min)",
-                        "priceCurrency": "GBP",
-                        "price": "250"
-                    },
-                    {
-                        "@type": "Offer",
-                        "name": "1:1 Family Constellations (In-person, 90 min)",
-                        "priceCurrency": "GBP",
-                        "price": "290"
-                    }
-                ]
-            }
-        ]
-    }
-    </script>
+
     <script src="events-float.js" defer></script>
 </body>
 </html>
