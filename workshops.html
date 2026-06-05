@@ -49,10 +49,19 @@
         .role-card { background: #E6EDF0; padding: 28px; border-radius: 8px; border-left: 3px solid var(--accent-color); }
         .role-card h3 { font-size: 1.1rem; font-family: var(--font-body); font-weight: 600; margin-bottom: 10px; }
         .role-card p { font-size: 0.95rem; margin: 0; }
-        .workshop-booking-callout { background: #E6EDF0; border-left: 4px solid var(--accent-color); border-radius: 8px; padding: 20px 24px; margin-top: 1.5rem; }
-        .workshop-booking-intro { font-weight: 600; font-size: 1rem; margin: 0 0 6px 0; }
-        .workshop-booking-detail { font-size: 0.95rem; margin: 0 0 14px 0; color: var(--text-secondary); }
-        .workshop-booking-btn { display: inline-block; }
+        .upcoming-workshops { margin-top: 1.5rem; }
+        .upcoming-workshops-heading { font-family: var(--font-body); font-weight: 600; font-size: 1rem; margin: 0 0 14px 0; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
+        .upcoming-workshops-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .workshop-event-card { background: #E6EDF0; border-top: 3px solid var(--accent-color); border-radius: 8px; padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; }
+        .workshop-event-date-badge { display: flex; align-items: baseline; gap: 6px; }
+        .date-day { font-size: 2rem; font-weight: 400; font-family: var(--font-heading); color: var(--accent-color); line-height: 1; }
+        .date-monthyear { font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); }
+        .workshop-event-name { font-weight: 600; font-size: 0.95rem; margin: 0; color: var(--text-primary); line-height: 1.4; }
+        .workshop-event-meta { font-size: 0.875rem; color: var(--text-secondary); margin: 0; display: flex; flex-direction: column; gap: 3px; }
+        .workshop-event-meta span { display: flex; align-items: center; gap: 5px; }
+        .workshop-event-meta .meta-icon { opacity: 0.6; flex-shrink: 0; }
+        .workshop-event-btn { margin-top: auto; padding-top: 6px; align-self: flex-start; }
+        @media (max-width: 600px) { .upcoming-workshops-grid { grid-template-columns: 1fr; } }
 
         .testimonials-strip { background-color: #263056; color: var(--white); padding: 60px 24px; text-align: center; }
         .testimonials-strip h2 { color: var(--white); font-size: 1.75rem; border-bottom: none; padding-bottom: 0; }
@@ -122,6 +131,31 @@
                     "url": "https://www.tickettailor.com/events/sarapossconstellations/2252056",
                     "availability": "https://schema.org/InStock"
                 }
+            },
+            {
+                "@type": "Event",
+                "name": "Personal Issue and Family Constellations Workshop with Sara Poss",
+                "startDate": "2026-07-23T18:30:00+01:00",
+                "endDate": "2026-07-23T21:30:00+01:00",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                    "@type": "Place",
+                    "name": "The House",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "9 John Street",
+                        "addressLocality": "London",
+                        "postalCode": "WC1N 2ES",
+                        "addressCountry": "GB"
+                    }
+                },
+                "organizer": { "@id": "https://www.saraposs.com/#sara-poss" },
+                "offers": {
+                    "@type": "Offer",
+                    "url": "https://buytickets.at/sarapossconstellations/2252219",
+                    "availability": "https://schema.org/InStock"
+                }
             }
         ]
     }
@@ -181,10 +215,49 @@
                     </div>
                 </div>
                 <p data-i18n="w_participants_outro">Both ways of participating can lead to profound understanding and emotional release.</p>
-                <div class="workshop-booking-callout">
-                    <p class="workshop-booking-intro" data-i18n="w_upcoming_workshop_intro">Next workshop — Book your place</p>
-                    <p class="workshop-booking-detail"><span data-i18n="events_title">Family & Personal Issue Workshop</span> · <span data-i18n="events_date">8th July 2026</span>, <span data-i18n="events_time">6pm - 9pm</span></p>
-                    <a href="https://www.tickettailor.com/events/sarapossconstellations/2252056" target="_blank" rel="noopener noreferrer" class="btn workshop-booking-btn" data-i18n="events_btn">Book tickets</a>
+                <div class="upcoming-workshops">
+                    <p class="upcoming-workshops-heading" data-i18n="events_panel_heading">Upcoming Workshops</p>
+                    <div class="upcoming-workshops-grid">
+
+                        <div class="workshop-event-card">
+                            <div class="workshop-event-date-badge">
+                                <span class="date-day">8</span>
+                                <span class="date-monthyear">Jul 2026</span>
+                            </div>
+                            <p class="workshop-event-name" data-i18n="events_title">Family &amp; Personal Issue Workshop</p>
+                            <div class="workshop-event-meta">
+                                <span>
+                                    <svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span data-i18n="events_time">6pm – 9pm</span>
+                                </span>
+                                <span>
+                                    <svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <span data-i18n="events_venue">Nordoff &amp; Robbins, NW5 1PQ</span>
+                                </span>
+                            </div>
+                            <a href="https://www.tickettailor.com/events/sarapossconstellations/2252056" target="_blank" rel="noopener noreferrer" class="btn workshop-event-btn" data-i18n="events_btn">Book tickets</a>
+                        </div>
+
+                        <div class="workshop-event-card">
+                            <div class="workshop-event-date-badge">
+                                <span class="date-day">23</span>
+                                <span class="date-monthyear">Jul 2026</span>
+                            </div>
+                            <p class="workshop-event-name" data-i18n="events2_title">Personal Issue and Family Constellations Workshop</p>
+                            <div class="workshop-event-meta">
+                                <span>
+                                    <svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span data-i18n="events2_time">6:30pm – 9:30pm</span>
+                                </span>
+                                <span>
+                                    <svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <span data-i18n="events2_venue">The House, 9 John St, WC1N 2ES</span>
+                                </span>
+                            </div>
+                            <a href="https://buytickets.at/sarapossconstellations/2252219" target="_blank" rel="noopener noreferrer" class="btn workshop-event-btn" data-i18n="events_btn">Book tickets</a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
