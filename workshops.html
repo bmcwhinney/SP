@@ -61,11 +61,6 @@
         .workshop-event-meta span { display: flex; align-items: center; gap: 5px; }
         .workshop-event-meta .meta-icon { opacity: 0.6; flex-shrink: 0; }
         .workshop-event-btn { margin-top: auto; padding-top: 6px; align-self: flex-start; }
-        .closed-group-workshop { margin-top: 2.5rem; }
-        .closed-group-workshop > p:not(.upcoming-workshops-heading) { margin: 0 0 16px 0; font-size: 0.95rem; color: var(--text-secondary); max-width: 52ch; }
-        .closed-group-workshop .workshop-event-card { max-width: 380px; }
-        .workshop-event-date-badge--ongoing { align-items: center; }
-        .date-ongoing { font-size: 0.85rem; font-weight: 600; font-family: var(--font-body); color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.05em; }
         @media (max-width: 600px) { .upcoming-workshops-grid { grid-template-columns: 1fr; } }
 
         .testimonials-strip { background-color: #263056; color: var(--white); padding: 60px 24px; text-align: center; }
@@ -200,8 +195,8 @@
 <body>
     <a href="#main-content" class="skip-link" data-i18n="skip_link">Skip to content</a>
     <div id="site-nav"></div>
-    <script src="nav.js?v=4" defer></script>
-    <script src="lang.js?v=4" defer></script>
+    <script src="nav.js?v=5" defer></script>
+    <script src="lang.js?v=5" defer></script>
 
     <main id="main-content">
         <section class="page-hero">
@@ -295,18 +290,6 @@
 
                     </div>
                 </div>
-
-                <div class="closed-group-workshop">
-                    <p class="upcoming-workshops-heading" data-i18n="w_closed_group_heading">Closed Group Workshop</p>
-                    <p data-i18n="w_closed_group_desc">A committed closed group meeting regularly for deep constellation work. Places are limited — book via the link below.</p>
-                    <div class="workshop-event-card">
-                        <div class="workshop-event-date-badge workshop-event-date-badge--ongoing">
-                            <span class="date-ongoing" data-i18n="events3_meta">Ongoing closed group</span>
-                        </div>
-                        <p class="workshop-event-name" data-i18n="events3_title">Ongoing Constellations Group</p>
-                        <a href="https://buytickets.at/sarapossconstellations/2288447" target="_blank" rel="noopener noreferrer" class="btn workshop-event-btn" data-i18n="events_btn">Book tickets</a>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -388,6 +371,7 @@
                 <a href="/systemic-therapy" class="footer-link" data-i18n="fnav_systemic">Systemic Therapy</a>
                 <a href="/1to1-sessions" class="footer-link" data-i18n="fnav_11_sessions">1:1 Sessions</a>
                 <a href="/workshops" class="footer-link" data-i18n="nav_const_open">Open Group Workshops</a>
+                <a href="/closed-group-workshop" class="footer-link" data-i18n="nav_const_closed">Closed Group Workshop</a>
                 <a href="/bespoke-workshops" class="footer-link" data-i18n="nav_const_bespoke">Bespoke Workshops</a>
                 <a href="/media-constellations" class="footer-link" data-i18n="nav_mc">Media Constellations</a>
                 <a href="/contact" class="footer-link" data-i18n="fnav_contact">Contact</a>
