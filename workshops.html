@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <title>Family Constellations Workshops | Sara Poss Therapy</title>
+    <meta name="description" content="Open group Family Constellations workshops with Sara Poss. Uncover hidden family dynamics and generational patterns in a safe, supportive space. North London and online.">
+    <link rel="canonical" href="https://www.saraposs.com/workshops">
+    <link rel="alternate" hreflang="en" href="https://www.saraposs.com/workshops">
+    <link rel="alternate" hreflang="de" href="https://www.saraposs.com/workshops">
+    <link rel="alternate" hreflang="x-default" href="https://www.saraposs.com/workshops">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:site_name" content="Sara Poss Therapy">
+    <meta property="og:title" content="Family Constellations Workshops | Sara Poss Therapy">
+    <meta property="og:description" content="Open group Family Constellations workshops with Sara Poss. Uncover hidden family dynamics and generational patterns. North London and online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.saraposs.com/workshops">
+    <meta property="og:image" content="https://www.saraposs.com/sara-photo.jpg">
+    <meta property="og:image:width" content="700">
+    <meta property="og:image:height" content="1050">
+    <meta property="og:image:alt" content="Sara Poss, Family Constellations workshop facilitator">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Family Constellations Workshops | Sara Poss Therapy">
+    <meta name="twitter:description" content="Open group Family Constellations workshops with Sara Poss. North London and online.">
+    <meta name="twitter:image" content="https://www.saraposs.com/sara-photo.jpg">
+    <meta name="twitter:image:alt" content="Sara Poss, Family Constellations Workshops">
+    <link rel="dns-prefetch" href="https://wa.me">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600&display=swap"></noscript>
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="nav.css?v=3">
+    <link rel="preload" as="image" href="heroimage.webp" fetchpriority="high">
+    <link rel="preload" href="/SaraPOSSLOGO.webp" as="image">
+    
+    <style>
+        /* === WORKSHOPS-ONLY STYLES === */
+        .container { max-width: 800px; }
+
+        .roles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 1.5rem 0; }
+        .role-card { background: #E6EDF0; padding: 28px; border-radius: 8px; border-left: 3px solid var(--accent-color); }
+        .role-card h3 { font-size: 1.1rem; font-family: var(--font-body); font-weight: 600; margin-bottom: 10px; }
+        .role-card p { font-size: 0.95rem; margin: 0; }
+        .upcoming-workshops { margin-top: 1.5rem; }
+        .upcoming-workshops-heading { font-family: var(--font-body); font-weight: 600; font-size: 1rem; margin: 0 0 14px 0; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
+        .upcoming-workshops-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .workshop-event-card { background: #E6EDF0; border-top: 3px solid var(--accent-color); border-radius: 8px; padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; }
+        .workshop-event-date-badge { display: flex; align-items: baseline; gap: 6px; }
+        .date-day { font-size: 2rem; font-weight: 400; font-family: var(--font-heading); color: var(--accent-color); line-height: 1; }
+        .date-monthyear { font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); }
+        .workshop-event-name { font-weight: 600; font-size: 0.95rem; margin: 0; color: var(--text-primary); line-height: 1.4; }
+        .workshop-event-meta { font-size: 0.875rem; color: var(--text-secondary); margin: 0; display: flex; flex-direction: column; gap: 3px; }
+        .workshop-event-meta span { display: flex; align-items: center; gap: 5px; }
+        .workshop-event-meta .meta-icon { opacity: 0.6; flex-shrink: 0; }
+        .workshop-event-btn { margin-top: auto; padding-top: 6px; align-self: flex-start; }
+        @media (max-width: 600px) { .upcoming-workshops-grid { grid-template-columns: 1fr; } }
+
+        .testimonials-strip { background-color: #263056; color: var(--white); padding: 60px 24px; text-align: center; }
+        .testimonials-strip h2 { color: var(--white); font-size: 1.75rem; border-bottom: none; padding-bottom: 0; }
+        .testimonials-strip p { color: rgba(255,255,255,0.85); }
+        .testimonials-strip .stars { font-size: 1.4rem; color: #F4B400; letter-spacing: 3px; margin-top: 1rem; }
+        .testimonials-strip .google-link { color: var(--white); text-decoration: underline; font-weight: 700; margin-top: 12px; display: inline-block; }
+        .testimonials-strip .google-link:hover { color: var(--white); }
+
+        @media (max-width: 768px) {
+            .roles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saraposs.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Family Constellations", "item": "https://www.saraposs.com/workshops" },
+                    { "@type": "ListItem", "position": 3, "name": "Open Group Workshops" }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://www.saraposs.com/workshops#webpage",
+                "url": "https://www.saraposs.com/workshops",
+                "name": "Family Constellations Workshops | Sara Poss Therapy",
+                "description": "Open group Family Constellations workshops with Sara Poss. Uncover hidden family dynamics and generational patterns. North London and online.",
+                "isPartOf": { "@id": "https://www.saraposs.com/#website" },
+                "about": { "@id": "https://www.saraposs.com/workshops#service" },
+                "inLanguage": ["en", "de"]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.saraposs.com/workshops#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What happens at a family constellations workshop?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Workshops provide a safe, supportive, and confidential space. Sara works with an issue holder who brings a personal or professional challenge to explore. Other participants act as representatives, standing in for people or elements within a constellation. The process moves between conversation and experiential work, with insight emerging organically. Both roles — issue holder and representative — can lead to profound understanding and emotional release." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need to bring a personal issue to attend a workshop?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "No. You can attend as a representative (resource) without bringing a personal issue. Representatives often gain surprising personal insights through the process itself, and no prior experience is required." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How many people attend a family constellations workshop?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Workshops are kept to a small group to ensure an intimate, safe environment. Up to three issue holders are supported in each session, with remaining participants serving as representatives." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is any prior experience needed for a family constellations workshop?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "No prior experience is required. Workshops welcome people who are new to constellation work as well as those with previous experience." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Where are the family constellations workshops held?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Workshops are held at venues in Central and North London. Upcoming dates and venue details are listed on this page. Sara also offers private bespoke workshops for groups and organisations." }
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "@id": "https://www.saraposs.com/workshops#service",
+                "name": "Family Constellations Workshops",
+                "description": "Open group workshops uncovering hidden family dynamics and generational patterns in a safe, supportive space. North London and online.",
+                "provider": { "@id": "https://www.saraposs.com/#sara-poss" },
+                "areaServed": [
+                    { "@type": "City", "name": "London" },
+                    { "@type": "AdministrativeArea", "name": "North London" }
+                ]
+            },
+            {
+                "@type": "Event",
+                "name": "Family & Personal Issue Workshop",
+                "startDate": "2026-07-08T18:00:00+01:00",
+                "endDate": "2026-07-08T21:00:00+01:00",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                    "@type": "Place",
+                    "name": "Nordoff & Robbins Music Therapy",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "2 Lissenden Gardens",
+                        "addressLocality": "London",
+                        "postalCode": "NW5 1PQ",
+                        "addressCountry": "GB"
+                    }
+                },
+                "organizer": { "@id": "https://www.saraposs.com/#sara-poss" },
+                "offers": {
+                    "@type": "Offer",
+                    "url": "https://www.tickettailor.com/events/sarapossconstellations/2252056",
+                    "availability": "https://schema.org/InStock"
+                }
+            },
+            {
+                "@type": "Event",
+                "name": "Personal Issue and Family Constellations Workshop with Sara Poss",
+                "startDate": "2026-07-23T18:30:00+01:00",
+                "endDate": "2026-07-23T21:30:00+01:00",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                    "@type": "Place",
+                    "name": "The House",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "9 John Street",
+                        "addressLocality": "London",
+                        "postalCode": "WC1N 2ES",
+                        "addressCountry": "GB"
+                    }
+                },
+                "organizer": { "@id": "https://www.saraposs.com/#sara-poss" },
+                "offers": {
+                    "@type": "Offer",
+                    "url": "https://buytickets.at/sarapossconstellations/2252219",
+                    "availability": "https://schema.org/InStock"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">Skip to content</a>
+    <div id="site-nav"></div>
+    <script src="nav.js?v=3" defer></script>
+    <script src="lang.js?v=3" defer></script>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <h1 data-i18n="page_workshops_title">Family Constellations Workshops</h1>
+                <p class="tagline" data-i18n="page_workshops_tagline">Open Group Workshops</p>
+            </div>
+        </section>
+
+        <div class="trust-banner">
+            <span data-i18n="trust_label">Registered & Accredited:</span>
+            <span data-i18n="trust_ukcp"><strong>UKCP</strong> (UK Council for Psychotherapy)</span>
+            <span data-i18n="trust_dgsf"><strong>DGSF</strong> (German Society for Systemic Therapy)</span>
+            <span data-i18n="trust_affp"><strong>AFSP</strong> (Association For Family And Systemic Psychotherapy)</span>
+        </div>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 data-i18n="w_understand_title">Understand challenges and transform them</h2>
+                <p data-i18n="w_understand_p">Family Constellations workshops offer a unique way to uncover the hidden roots of personal and professional challenges. Many people come feeling stuck, constrained, or unsure why certain patterns keep repeating. This method helps you move beyond the surface problem to explore its deeper origins, often connected to previous generations.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 data-i18n="w_systems_title">How Family Systems Shape Our Lives</h2>
+                <p data-i18n="w_systems_p1">Our parents, grandparents and ancestors create an invisible web of relationships and patterns that influence our choices and experiences. Without realising it, we may carry unconscious loyalties to these family dynamics, which can limit our freedom.</p>
+                <p data-i18n="w_systems_p2">Family Constellations make these hidden patterns visible. By seeing and integrating them, you gain clarity, choice, and a greater sense of agency.</p>
+                <div class="highlight">
+                    <p><strong data-i18n="w_systems_highlight">Understanding the forces shaping your life brings real freedom to move forward.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 data-i18n="w_participants_title">How Participants Take Part</h2>
+                <p data-i18n="w_participants_intro">Workshops provide a safe, supportive, and confidential space. The process begins with a conversation between the facilitator, Sara, and the person bringing an issue. From there, participants take part in one of two ways:</p>
+                <div class="roles-grid">
+                    <div class="role-card">
+                        <h3 data-i18n="w_role_holder">Issue Holder</h3>
+                        <p data-i18n="w_role_holder_p">Bring a personal or professional challenge to explore. Up to three issue holders are supported in each workshop. Issues may include family patterns, relationships, work, health, creativity, or life decisions.</p>
+                    </div>
+                    <div class="role-card">
+                        <h3 data-i18n="w_role_rep">Representative (Resource)</h3>
+                        <p data-i18n="w_role_rep_p">Stand in for someone or something in a Constellation. No prior experience is needed. Representatives often gain surprising personal insights and healing.</p>
+                    </div>
+                </div>
+                <p data-i18n="w_participants_outro">Both ways of participating can lead to profound understanding and emotional release.</p>
+                <div class="upcoming-workshops">
+                    <p class="upcoming-workshops-heading" data-i18n="events_panel_heading">Upcoming Workshops</p>
+                    <div class="upcoming-workshops-grid">
+
+                        <div class="workshop-event-card">
+                            <div class="workshop-event-date-badge">
+                                <span class="date-day">8</span>
+                                <span class="date-monthyear">Jul 2026</span>
+                            </div>
+                            <p class="workshop-event-name" data-i18n="events_title">Family &amp; Personal Issue Workshop</p>
+                            <div class="workshop-event-meta">
+                                <span>
+                                    <svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span data-i18n="events_time">6pm – 9pm</span>
+                                </span>
+                                <span>
+                                    <svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <span data-i18n="events_venue">Nordoff &amp; Robbins, NW5 1PQ</span>
+                                </span>
+                            </div>
+                            <a href="https://www.tickettailor.com/events/sarapossconstellations/2252056" target="_blank" rel="noopener noreferrer" class="btn workshop-event-btn" data-i18n="events_btn">Book tickets</a>
+                        </div>
+
+                        <div class="workshop-event-card">
+                            <div class="workshop-event-date-badge">
+                                <span class="date-day">23</span>
+                                <span class="date-monthyear">Jul 2026</span>
+                            </div>
+                            <p class="workshop-event-name" data-i18n="events2_title">Personal Issue and Family Constellations Workshop</p>
+                            <div class="workshop-event-meta">
+                                <span>
+                                    <svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span data-i18n="events2_time">6:30pm – 9:30pm</span>
+                                </span>
+                                <span>
+                                    <svg class="meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <span data-i18n="events2_venue">The House, 9 John St, WC1N 2ES</span>
+                                </span>
+                            </div>
+                            <a href="https://buytickets.at/sarapossconstellations/2252219" target="_blank" rel="noopener noreferrer" class="btn workshop-event-btn" data-i18n="events_btn">Book tickets</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 data-i18n="fc_reading_title">Further reading</h2>
+                <p><a href="https://welldoing.org/article/what-is-family-constellations-therapy" target="_blank" rel="noopener noreferrer" data-i18n="fc_reading_welldoing">What is Family Constellations Therapy?</a> <span data-i18n="fc_reading_welldoing_src">(Welldoing)</span></p>
+                <p><a href="https://www.thecsc.net/parenting-constellations-with-sara-poss-betsy-gibson/" target="_blank" rel="noopener noreferrer" data-i18n="fc_reading_csc">Parenting Constellations with Sara Poss &amp; Betsy Gibson</a> <span data-i18n="fc_reading_csc_src">(The CSC)</span></p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 data-i18n="about_heading">About Sara</h2>
+                <p data-i18n="about_sara_bio">Sara is a systemic therapist with over ten years' experience supporting individuals, couples, and families. She has facilitated many Family Constellations workshops, creating a safe, grounded space where insight, reflection, and growth can naturally emerge.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <p class="constellations-disclaimer" data-i18n="constellations_disclaimer">Constellations are a process for expanding understanding and awareness. They are not a diagnostic or treatment method for any psychological condition or disorder.</p>
+            </div>
+        </section>
+
+        <section class="content-section faq-section">
+            <div class="container">
+                <h2 data-i18n="faq_heading">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="faq_w_q1">What happens at a family constellations workshop?</summary>
+                        <div class="faq-answer"><p data-i18n="faq_w_a1">Workshops provide a safe, supportive, and confidential space. Sara works with an issue holder who brings a personal or professional challenge to explore. Other participants act as representatives, standing in for people or elements within a constellation. Insight emerges through the experiential process. Both roles can lead to profound understanding and emotional release.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="faq_w_q2">Do I need to bring a personal issue to attend?</summary>
+                        <div class="faq-answer"><p data-i18n="faq_w_a2">No. You can attend as a representative (resource) without bringing a personal issue. Representatives often gain surprising personal insights through the process itself, and no prior experience is required.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="faq_w_q3">How many people attend each workshop?</summary>
+                        <div class="faq-answer"><p data-i18n="faq_w_a3">Workshops are kept to a small, intimate group. Up to three issue holders are supported in each session, with remaining participants serving as representatives.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="faq_w_q4">Do I need prior experience?</summary>
+                        <div class="faq-answer"><p data-i18n="faq_w_a4">No prior experience is required. Sara's workshops welcome people completely new to constellation work as well as those who have attended before.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="faq_w_q5">What is the difference between a workshop and a 1:1 session?</summary>
+                        <div class="faq-answer"><p data-i18n="faq_w_a5">A <a href="/1to1-sessions">1:1 Family Constellations session</a> is a private, 90-minute session with Sara focused entirely on your individual theme. Workshops are small group experiences where multiple issues are explored in the same session. Some people find the group setting especially powerful; others prefer the privacy of 1:1 work.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="faq_w_q6">Are bespoke workshops available for organisations?</summary>
+                        <div class="faq-answer"><p data-i18n="faq_w_a6">Yes. Sara facilitates <a href="/bespoke-workshops">tailored workshops for teams and organisations</a>, drawing on systemic and constellation approaches to explore group dynamics, leadership patterns, and organisational challenges. These are available across the UK and Europe.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-strip">
+            <div class="container">
+                <h2 data-i18n="what_people_say">What People Say</h2>
+                <p data-i18n="workshops_testimonial">Participants describe Sara's workshops as insightful, transformative, and deeply supportive.</p>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <a href="https://www.google.com/maps/place/Sara+Poss/@51.5616846,-0.1527593,17z/data=!3m1!4b1!4m6!3m5!1s0x48761aed49518393:0x548b2e8b683819a8!8m2!3d51.5616813!4d-0.1501844!16s%2Fg%2F11cmh_vn5y?entry=ttu&g_ep=EgoyMDI2MDUyNi4wIKXMDSoASAFQAw%3D%3D" class="google-link" target="_blank" rel="noopener noreferrer" data-i18n="read_google_reviews">Read Google Reviews</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3 data-i18n="footer_heading">Ready to take the next step?</h3>
+            <p data-i18n="footer_text">Reach out to discuss how we can work together.</p>
+            <a href="https://cal.com/sara-poss-gsi2tz/15min" class="btn footer-cta" target="_blank" rel="noopener noreferrer" data-i18n="footer_cta">Book a Free Discovery Call</a>
+
+            <div class="accreditation-badges">
+                <img src="UKCP.webp" alt="UKCP - UK Council for Psychotherapy, Professional Standards Authority Accredited Register" loading="lazy" decoding="async" width="500" height="143">
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="/" class="footer-link" data-i18n="fnav_home">Home</a>
+                <a href="/systemic-therapy" class="footer-link" data-i18n="fnav_systemic">Systemic Therapy</a>
+                <a href="/1to1-sessions" class="footer-link" data-i18n="fnav_11_sessions">1:1 Sessions</a>
+                <a href="/workshops" class="footer-link" data-i18n="nav_const_open">Open Group Workshops</a>
+                <a href="/bespoke-workshops" class="footer-link" data-i18n="nav_const_bespoke">Bespoke Workshops</a>
+                <a href="/media-constellations" class="footer-link" data-i18n="nav_mc">Media Constellations</a>
+                <a href="/contact" class="footer-link" data-i18n="fnav_contact">Contact</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/sara-poss/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+                <a href="https://www.instagram.com/sara_and_therapy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+            </div>
+
+            <div class="footer-legal">
+                <p data-i18n="footer_legal">&copy; 2026 Sara Poss Therapy. All rights reserved.</p>
+                <p class="footer-credit">Website by <a href="https://satsuma.studio/" target="_blank" rel="noopener noreferrer">Satsuma</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a id="wa-link" href="https://wa.me/447903539734?text=Hi%20Sara%2C%20I%20found%20your%20website%20and%20I%E2%80%99d%20love%20to%20find%20out%20more." class="whatsapp-float pulse" target="_blank" rel="noopener noreferrer" aria-label="Message Sara on WhatsApp">
+        <span class="tooltip" data-i18n="wa_tooltip">Message Sara on WhatsApp</span>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script src="events-float.js?v=3" defer></script>
+</body>
+</html>
